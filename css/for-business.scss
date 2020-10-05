@@ -1,0 +1,411 @@
+// media quaries
+@mixin for-phone-landscape {
+    @media (max-width: 767px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin for-phone-sm {
+    @media (max-width: 360px) {
+        @content;
+    }
+}
+
+@mixin for-phone {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-up {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape {
+    @media (max-width: 1024px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin for-desktop-md {
+    @media (max-width: 1366px) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+// variables
+$head-font: 'Inter',
+'Arial',
+sans-serif;
+$body-font: 'Inter',
+'Arial',
+sans-serif;
+$primary-color: #362e8b;
+$accent-color: #7dc242;
+$white: #fff;
+$black: #111;
+$outline-width: 0;
+$break-point: 600px;
+$gray-base: #999999;
+// style
+body {
+    font-family: $body-font;
+    font-size: 1rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none !important;
+    transition: all 0.2s ease-in-out;
+    font-family: $body-font;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#main-nav {
+    background: $white;
+    border-bottom: solid 1px #f0f0f0;
+}
+
+#main-nav .navbar-dark .navbar-nav .nav-link {
+    color: $black;
+}
+
+#main-banner {
+    background: #f5ffec url(../images/banners/banner-for-business.svg) center bottom no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    @include for-tablet {
+        background: #f5ffec;
+    }
+    .banner-caption {
+        @include for-tablet {
+            margin-top: 58px;
+        }
+        h2 {
+            color: $accent-color;
+            font-size: 2.25rem;
+            @include for-tablet {
+                font-size: 2rem;
+            }
+        }
+        p {
+            color: $black;
+        }
+    }
+}
+
+.home-partners {
+    background: $white;
+    border-bottom: solid 1px #f0f0f0;
+}
+
+.home-title {
+    color: $accent-color;
+    @include for-tablet {
+        font-size: 1.75rem;
+    }
+    @include for-phone {
+        font-size: 1.75rem;
+    }
+}
+
+.home-intro {
+    @include for-tablet {
+        padding: 3rem 1rem;
+    }
+    @include for-phone {
+        padding: 3rem 1rem;
+    }
+    .intro-content {
+        p {
+            max-width: 75ch;
+        }
+    }
+}
+
+.intro-content {
+    @include for-tablet {
+        margin-bottom: 3rem;
+    }
+}
+
+.feat-content {
+    height: 400px;
+    display: table-cell;
+    vertical-align: middle;
+    @include for-tablet {
+        height: 200px;
+    }
+    @include for-phone {
+        text-align: center;
+    }
+    h3 {
+        color: $accent-color;
+        font-size: 1.75rem;
+        font-weight: 700;
+        @include for-tablet {
+            font-size: 1.5rem;
+        }
+    }
+    p {
+        @include for-tablet {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.feat-content-img {
+    img {
+        @include for-tablet {
+            width: 200px;
+        }
+    }
+    @include for-phone {
+        text-align: center;
+    }
+}
+
+.home-steps {
+    background: rgb(76, 165, 0);
+    background: linear-gradient(-90deg, rgba(76, 165, 0, 1) 0%, rgba(125, 194, 66, 1) 100%);
+    min-height: 800px;
+    margin-bottom: 200px;
+    @include for-tablet {
+        min-height: 100%;
+        margin-bottom: 1rem;
+        padding: 3rem 1rem 0 1rem;
+    }
+}
+
+.timeline-video {
+    @include for-tablet {
+        position: relative;
+    }
+}
+
+.home-feedbacks {
+    background: rgb(76, 165, 0);
+    background: linear-gradient(-90deg, rgba(76, 165, 0, 1) 0%, rgba(125, 194, 66, 1) 100%);
+}
+
+.home-merchants {
+    padding: 3rem 0 5rem 0;
+    @include for-tablet {
+        padding: 3rem 1rem 5rem 1rem;
+    }
+}
+
+.home-cta {
+    .cta-content {
+        h2 {
+            color: $accent-color;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+footer {
+    background: #eee;
+    .footer-about {
+        p {
+            color: $black;
+        }
+    }
+    .footer-links {
+        ul {
+            li {
+                a {
+                    color: $black;
+                }
+            }
+        }
+        h5 {
+            color: $black;
+        }
+    }
+    .copyright-bar {
+        border-color: #ddd;
+    }
+}
+
+ul.social-icons li img {
+    margin-bottom: 0;
+}
+
+.partner-logos p,
+.copyright-bar .copyright p {
+    color: $black;
+}
+
+footer .copyright-bar .copyright p {
+    color: $black;
+}
+
+.section-header {
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+.steps-header {
+    @extend .section-header;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.steps-timeline {
+    outline: 1px dashed rgba(red, $outline-width);
+    @media screen and (max-width: $break-point) {
+        border-left: 2px dashed $white;
+        margin-left: 25px;
+    }
+    @media screen and (min-width: $break-point) {
+        border-top: 2px dashed $white;
+        padding-top: 20px;
+        margin-top: 5rem;
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    @include for-phone {
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.steps-one,
+.steps-two,
+.steps-three {
+    outline: 1px dashed rgba(green, $outline-width);
+    @media screen and (max-width: $break-point) {
+        margin-left: -25px;
+    }
+    @media screen and (min-width: $break-point) {
+        float: left;
+        width: 33%;
+        margin-top: -50px;
+    }
+}
+
+.steps-one,
+.steps-two {
+    @media screen and (max-width: $break-point) {
+        padding-bottom: 40px;
+    }
+}
+
+.steps-one {
+    @media screen and (min-width: $break-point) {
+        margin-left: -15%;
+        margin-right: 15%;
+    }
+}
+
+.steps-three {
+    @media screen and (max-width: $break-point) {
+        margin-bottom: -100%;
+    }
+    @media screen and (min-width: $break-point) {
+        margin-left: 15%;
+        margin-right: -15%;
+    }
+}
+
+.steps-img {
+    display: block;
+    margin: auto;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    @media screen and (max-width: $break-point) {
+        float: left;
+        margin-right: 20px;
+    }
+}
+
+.steps-description {
+    margin: 1rem 0 0 0;
+    @include for-phone {
+        text-align: left;
+    }
+}
+
+.steps-name {
+    color: $white;
+    font-weight: 700;
+    margin-top: 1rem;
+    @extend .section-header;
+    @include for-tablet {
+        font-size: 1rem;
+    }
+    @media screen and (min-width: $break-point) {
+        text-align: center;
+    }
+    @include for-phone {
+        text-align: left;
+    }
+}
+
+.steps-description,
+.home-steps .steps-content p {
+    overflow: hidden;
+    @include for-tablet {
+        font-size: 0.9rem;
+    }
+    @media screen and (min-width: $break-point) {
+        text-align: center;
+    }
+}
+
+.nav-cta {
+    @include for-tablet {
+        display: none;
+    }
+}
+
+.nav-cta-resp {
+    padding: 0 1rem;
+    .nav-cta {
+        @include for-tablet {
+            display: block !important;
+        }
+    }
+}

@@ -1,0 +1,486 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <link rel="icon" href="images/misc/jazzypay-favicon.ico" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugins/owl-carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<title>JazzyPay - Secure Online Payments</title>
+
+<body>
+
+    <!-- <div id="privacy-popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="privacy-content">
+                        <p>By using our website and/or mobile app, you hereby give your consent to the practices described in our <a target="_blank" href="privacy.html">Privacy Notice.</a></p>
+
+                        <button class="btn btn-primary">Yes, I accept</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close-toggle"><i class="las la-times"></i></div>
+    </div> -->
+
+    <header>
+        <div id="content-anchor"></div>
+        <div id="sticky-phantom"></div>
+        <div id="sticky">
+            <div id="main-nav">
+                <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-transparent">
+
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                            <div id="site-logo">
+                                <img src="images/misc/logo-jazzypay.png" id="logo" />
+                            </div>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav navbar-center">
+                                <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                                <li class="nav-item"><a href="blog-list.html" class="nav-link">Blogs</a></li>
+                                <li class="nav-item"><a href="index.html" class="nav-link">Help Center</a></li>
+                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                            </ul>
+                            <div class="nav-cta-resp"></div>
+                        </div>
+                        <form class="form-inline nav-cta my-2 my-lg-0">
+                            <a href="user-login.html" class="btn btn-outline-light my-2 mr-2 my-sm-0"><i class="las la-lock"></i> Login</a>
+                            <a href="for-business.html" class="btn btn-light my-2 my-sm-0"><i class="las la-briefcase"></i> JazzyPay for Business</a>
+                        </form>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+        <div id="main-banner">
+
+            <div class="banner-caption">
+                <h2 class="mb-3">Make secure payments instantly from anywhere in the world!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter company name" aria-label="Enter merchant name" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button" id="button-addon2"><i class="las la-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="scan-qr">
+                    <p>or</p>
+                    <a data-toggle="modal" data-target="#qrscanner-modal"><i class="las la-qrcode"></i> Scan the QR Code</a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="modal fade" id="qrscanner-modal" tabindex="-1" role="dialog" aria-labelledby="qrscanner-modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Scan QR Code</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="las la-times"></i></span></button>
+                </div>
+                <!-- <video id="scanner" playsinline autoplay loop>
+                    <source src="videos/qrscanner.mp4" type="video/mp4">
+                </video> -->
+                <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
+                <canvas id="canvas" hidden></canvas>
+                <div id="output" hidden>
+                    <div id="outputMessage">No QR code detected.</div>
+                    <div hidden><b>Data:</b> <span id="outputData"></span></div>
+                </div>
+                <div class="qr-note">
+                    <p>Place the QR code in the center of the square</p>
+                </div>
+                <div class="hole"></div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="home-partners">
+            <div class="container-fluid">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-2">
+                        <div class="partners-title">
+                            <p>Powered by our partners and investors</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <ul class="slider-home-partners owl-carousel owl-theme">
+                            <li><img src="images/others/partners/slider/techstars.png" alt=""></li>
+                            <li><img src="images/others/partners/slider/rakuten.png" alt=""></li>
+                            <li><img src="images/others/partners/slider/cocoon-capital.png" alt=""></li>
+                            <li><img src="images/others/partners/slider/amazon-web-services.png" alt=""></li>
+                            <li><img src="images/others/partners/slider/sisa.png" alt=""></li>
+                            <li><img src="images/others/partners/slider/twilio.png" alt=""></li>
+                            <li><img src="images/others/partners/slider/sendgrid.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-intro">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-8">
+                        <div class="intro-content">
+                            <h2 class="home-title" data-aos="fade-up" data-aos-delay="100">
+                                Easy and secure payments in a snap.
+                            </h2>
+                            <p data-aos="fade-up" data-aos-delay="200">Enjoy the convenience of fast and secure online payments with your preferred payment method with JazzyPay.</p>
+                            <img src="images/others/intro.png" data-aos="zoom-in-up" data-aos-delay="300" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-steps">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-12">
+                        <div class="steps-content">
+                            <h2 class="home-title" data-aos="fade-up" data-aos-delay="100">
+                                How it works
+                            </h2>
+                            <p data-aos="fade-up" data-aos-delay="100">Making secure online payments with JazzyPay is as simple as 1-2-3.
+                            </p>
+
+                            <div class="steps-timeline" data-aos="fade-in" data-aos-delay="200">
+
+                                <div class="steps-one">
+                                    <img class="steps-img" src="images/others/step1.png" alt="" />
+                                    <h3 class="steps-name">
+                                        Search merchant
+                                    </h3>
+                                    <p class="steps-description">
+                                        Search for the merchant you’d like to pay via the search bar or by scanning the store’s unique QR Code.
+                                    </p>
+                                </div>
+
+                                <div class="steps-two">
+                                    <img class="steps-img" src="images/others/step2.png" alt="" />
+                                    <h3 class="steps-name">
+                                        Select payment method
+                                    </h3>
+                                    <p class="steps-description">
+                                        Select your preferred payment method from 27 options.
+                                    </p>
+                                </div>
+
+                                <div class="steps-three">
+                                    <img class="steps-img" src="images/others/step3.png" alt="" />
+                                    <h3 class="steps-name">
+                                        Submit payment
+                                    </h3>
+                                    <p class="steps-description">
+                                        Submit the payment form with your payment details then it's done!
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="timeline-video mt-5" data-aos="fade-in" data-aos-delay="200">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <p>Or watch our complete payment guide below.</p>
+                                        <div class="embed-responsive embed-responsive-16by9 border mt-2 mb-5">
+                                            <video controls poster="images/others/thumbnail.png">
+                                        <source src="https://jazzypay-v2-public.s3-ap-southeast-1.amazonaws.com/jazzypay_how_to_pay.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-merchants">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-8">
+                        <div class="intro-content">
+                            <h2 class="home-title">
+                                Powering payments for our merchants
+                            </h2>
+                            <p>See some of our top merchants that you can pay through JazzyPay.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <ul class="slider-home-merchants owl-carousel mt-5">
+                            <li><img src="images/others/merchants/adventist-manila.jpg" alt=""></li>
+                            <li><img src="images/others/merchants/adventist-santiago.jpg" alt=""></li>
+                            <li><img src="images/others/merchants/adventist-college.jpg" alt=""></li>
+                            <li><img src="images/others/merchants/compleat-smile.jpg" alt=""></li>
+                            <li><img src="images/others/merchants/fivestar-college.jpg" alt=""></li>
+                            <li><img src="images/others/merchants/pingoy-hospital.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-feedbacks">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-12">
+                        <div class="feedbacks-content text-enter" data-aos="fade-right" data-aos-delay="100">
+                            <h2>
+                                Feedbacks
+                            </h2>
+                            <p>Why our merchants love what we do</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <ul class="slider-home-feedbacks owl-carousel mt-5 mb-3" data-aos="flip-up" data-aos-delay="100">
+                            <li>
+                                <div class="feedback-item">
+                                    <p>“JazzyPay has been an integral part in making our hospital adapt to the new normal. With so many payment options for our patients, it has everything we need in an online payment gateway provider.”</p>
+                                    <hr>
+                                    <div class="media">
+                                        <img src="images/others/merchants/adventist-manila.jpg" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                            <h5 class="mt-0">Ms. Lady Mataya-Dapat, Marketing Director</h5>
+                                            <strong>Adventist Medical Center Manila</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-cta" data-aos="zoom-in">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-8">
+                        <div class="cta-content">
+                            <h2 class="cta-title">
+                                Need JazzyPay for your business?
+                            </h2>
+                            <p>We’re here to help your business grow by upgrading your payment system.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cta-content text-lg-right">
+                            <a href="for-business.html" class="btn btn-secondary btn-lg"><i class="las la-briefcase"></i> Go to JazzyPay for Business</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section>
+        <div class="home-industry">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-9">
+                        <div class="section-heading">
+                            <h2>Supported Industries</h2>
+                        </div>
+                        <div class="ind-list">
+                            <ul>
+                                <li>
+                                    <div class="industry-box">
+                                        <img src="images/others/icon-clinic.svg" /> Clinics
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="industry-box">
+                                        <img src="images/others/icon-school.svg" /> Schools
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="industry-box">
+                                        <img src="images/others/icon-hospital.svg" /> Hospitals
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="industry-box">
+                                        <img src="images/others/icon-auto.svg" /> Auto-Detailing
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="industry-box">
+                                        <img src="images/others/icon-spa.svg" /> Beauty & Wellness
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="industry-box">
+                                        <img src="images/others/icon-gym.svg" /> Fitness Centers
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="industry-box">
+                                        <img src="images/others/icon-agency.svg" /> Travel Agencies
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="industry-box">
+                                        <img src="images/others/icon-more.svg" /> Others
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer>
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12">
+                        <div class="footer-about">
+                            <img src="images/misc/logo-jazzypay.png" />
+                            <p class="mb-5">Make secure payments instantly from anywhere in the world</p>
+                            <ul class="social-icons">
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/JazzyPayPH/"><img src="images/others/facebook.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://twitter.com/jazzypayph"><img src="images/others/twitter.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/jazzypay"><img src="images/others/instagram.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/company/jazzypay"><img src="images/others/linkedin.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCJStymOkpbyp7bhcp0LKTVA"><img src="images/others/youtube.svg"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4">
+                                <div class="footer-links">
+                                    <h5>Quicklinks</h5>
+                                    <ul>
+                                        <li class="nav-item"><a href="about.html">About</a></li>
+                                        <li class="nav-item"><a href="#">Blogs</a></li>
+                                        <li class="nav-item"><a href="#">Help Center</a></li>
+                                        <li class="nav-item"><a href="#">Video Center</a></li>
+                                        <li class="nav-item"><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="footer-links">
+                                    <h5>Others</h5>
+                                    <ul>
+                                        <li class="nav-item"><a href="terms.html">Terms and Conditions</a></li>
+                                        <li class="nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                                        <li class="nav-item"><a href="contact.html">Email us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4">
+                                <div class="footer-links">
+                                    <h5>Account</h5>
+                                    <ul>
+                                        <li class="nav-item"><a href="terms.html">Sign Up</a></li>
+                                        <li class="nav-item"><a href="privacy.html">Login</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="footer-links">
+                                    <h5>Download the app</h5>
+                                    <div class="app-btn">
+                                        <a href="https://apps.apple.com/us/app/jazzypay/id1250715169" target="_blank"><img src="images/others/download-app-store.svg" /></a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.jazzypay.androapp&hl=en" target="_blank"><img src="images/others/download-play-store.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 order-2 order-lg-1">
+                        <div class="copyright text-lg-left">
+                            <p>© 2020 JazzyPay, Inc. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 order-1 order-lg-2">
+                        <div class="partner-logos text-lg-right">
+                            <p class="d-lg-inline text-lg-right mr-1">You are safe with JazzyPay</p>
+                            <img src="images/others/partners/hackerproof.png" />
+                            <img src="images/others/partners/pci.png" />
+                            <img src="images/others/partners/sisa-security.png" />
+                            <img src="images/others/partners/sectigo.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="top">
+        <img src="images/misc/top.png" />
+    </div>
+
+    <!-- Plugins -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/line-awesome/css/line-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/global.css" />
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+
+    <script src="js/partner-slider.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- New QR Scanner -->
+    <script src="js/jsQR.js"></script>
+    <script src="js/qr-scanner.js"></script>
+
+</body>
+
+</html>

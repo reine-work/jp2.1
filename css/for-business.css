@@ -1,0 +1,411 @@
+body {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#main-nav {
+  background: #fff;
+  border-bottom: solid 1px #f0f0f0;
+}
+
+#main-nav .navbar-dark .navbar-nav .nav-link {
+  color: #111;
+}
+
+#main-banner {
+  background: #f5ffec url(../images/banners/banner-for-business.svg) center bottom no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  #main-banner {
+    background: #f5ffec;
+  }
+}
+
+@media (max-width: 768px) {
+  #main-banner .banner-caption {
+    margin-top: 58px;
+  }
+}
+
+#main-banner .banner-caption h2 {
+  color: #7dc242;
+  font-size: 2.25rem;
+}
+
+@media (max-width: 768px) {
+  #main-banner .banner-caption h2 {
+    font-size: 2rem;
+  }
+}
+
+#main-banner .banner-caption p {
+  color: #111;
+}
+
+.home-partners {
+  background: #fff;
+  border-bottom: solid 1px #f0f0f0;
+}
+
+.home-title {
+  color: #7dc242;
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-intro {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-intro {
+    padding: 3rem 1rem;
+  }
+}
+
+.home-intro .intro-content p {
+  max-width: 75ch;
+}
+
+@media (max-width: 768px) {
+  .intro-content {
+    margin-bottom: 3rem;
+  }
+}
+
+.feat-content {
+  height: 400px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .feat-content {
+    height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .feat-content {
+    text-align: center;
+  }
+}
+
+.feat-content h3 {
+  color: #7dc242;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .feat-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feat-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feat-content-img img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .feat-content-img {
+    text-align: center;
+  }
+}
+
+.home-steps {
+  background: #4ca500;
+  background: -webkit-gradient(linear, right top, left top, from(#4ca500), to(#7dc242));
+  background: linear-gradient(-90deg, #4ca500 0%, #7dc242 100%);
+  min-height: 800px;
+  margin-bottom: 200px;
+}
+
+@media (max-width: 768px) {
+  .home-steps {
+    min-height: 100%;
+    margin-bottom: 1rem;
+    padding: 3rem 1rem 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-video {
+    position: relative;
+  }
+}
+
+.home-feedbacks {
+  background: #4ca500;
+  background: -webkit-gradient(linear, right top, left top, from(#4ca500), to(#7dc242));
+  background: linear-gradient(-90deg, #4ca500 0%, #7dc242 100%);
+}
+
+.home-merchants {
+  padding: 3rem 0 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .home-merchants {
+    padding: 3rem 1rem 5rem 1rem;
+  }
+}
+
+.home-cta .cta-content h2 {
+  color: #7dc242;
+  margin-bottom: 2rem;
+}
+
+footer {
+  background: #eee;
+}
+
+footer .footer-about p {
+  color: #111;
+}
+
+footer .footer-links ul li a {
+  color: #111;
+}
+
+footer .footer-links h5 {
+  color: #111;
+}
+
+footer .copyright-bar {
+  border-color: #ddd;
+}
+
+ul.social-icons li img {
+  margin-bottom: 0;
+}
+
+.partner-logos p,
+.copyright-bar .copyright p {
+  color: #111;
+}
+
+footer .copyright-bar .copyright p {
+  color: #111;
+}
+
+.section-header, .steps-header, .steps-name {
+  color: #362e8b;
+  font-weight: 400;
+  font-size: 1.4em;
+}
+
+.steps-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.steps-timeline {
+  outline: 1px dashed rgba(255, 0, 0, 0);
+}
+
+@media screen and (max-width: 600px) {
+  .steps-timeline {
+    border-left: 2px dashed #fff;
+    margin-left: 25px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .steps-timeline {
+    border-top: 2px dashed #fff;
+    padding-top: 20px;
+    margin-top: 5rem;
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+}
+
+.steps-timeline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 767px) {
+  .steps-timeline {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.steps-one,
+.steps-two,
+.steps-three {
+  outline: 1px dashed rgba(0, 128, 0, 0);
+}
+
+@media screen and (max-width: 600px) {
+  .steps-one,
+  .steps-two,
+  .steps-three {
+    margin-left: -25px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .steps-one,
+  .steps-two,
+  .steps-three {
+    float: left;
+    width: 33%;
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .steps-one,
+  .steps-two {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .steps-one {
+    margin-left: -15%;
+    margin-right: 15%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .steps-three {
+    margin-bottom: -100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .steps-three {
+    margin-left: 15%;
+    margin-right: -15%;
+  }
+}
+
+.steps-img {
+  display: block;
+  margin: auto;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .steps-img {
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+.steps-description {
+  margin: 1rem 0 0 0;
+}
+
+@media (max-width: 767px) {
+  .steps-description {
+    text-align: left;
+  }
+}
+
+.steps-name {
+  color: #fff;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .steps-name {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .steps-name {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .steps-name {
+    text-align: left;
+  }
+}
+
+.steps-description,
+.home-steps .steps-content p {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .steps-description,
+  .home-steps .steps-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .steps-description,
+  .home-steps .steps-content p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-cta {
+    display: none;
+  }
+}
+
+.nav-cta-resp {
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav-cta-resp .nav-cta {
+    display: block !important;
+  }
+}
+/*# sourceMappingURL=for-business.css.map */
