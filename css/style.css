@@ -3290,10 +3290,15 @@ button[aria-expanded='false'] > .faq-icon {
   text-align: left;
 }
 
+.home-feedbacks .feedback-item p {
+  min-height: 120px;
+}
+
 .home-feedbacks .feedback-item .media img {
   width: 65px !important;
   height: 65px !important;
   border-radius: 4px;
+  border: solid 1px #eee;
 }
 
 .home-feedbacks .feedback-item .media h5 {

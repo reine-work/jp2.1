@@ -2773,11 +2773,15 @@ button[aria-expanded='false']>.faq-icon {
         border-radius: 6px;
         padding: 1.5rem;
         text-align: left;
+        p {
+            min-height: 120px;
+        }
         .media {
             img {
                 width: 65px !important;
                 height: 65px !important;
                 border-radius: 4px;
+                border: solid 1px #eee;
             }
             h5 {
                 font-size: 0.95rem;
