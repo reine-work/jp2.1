@@ -5,6 +5,7 @@ $('.slider-home-partners').owlCarousel({
     dots: false,
     autoplay: true,
     autoplayTimeout: 2000,
+    smartSpeed: 2000,
     autoplayHoverPause: true,
     responsive: {
         0: {

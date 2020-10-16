@@ -105,18 +105,18 @@ a {
 }
 
 #main-banner {
-    background: #f5ffec url(../images/banners/banner-for-business.svg) center bottom no-repeat;
+    background: #f3f3ff url(../images/banners/banner-for-business.svg) center bottom no-repeat;
     background-size: cover;
     min-height: 100vh;
     @include for-tablet {
-        background: #f5ffec;
+        background: #f3f3ff;
     }
     .banner-caption {
         @include for-tablet {
             margin-top: 58px;
         }
         h2 {
-            color: $accent-color;
+            color: $primary-color;
             font-size: 2.25rem;
             @include for-tablet {
                 font-size: 2rem;
@@ -134,7 +134,7 @@ a {
 }
 
 .home-title {
-    color: $accent-color;
+    color: $primary-color;
     @include for-tablet {
         font-size: 1.75rem;
     }
@@ -174,7 +174,7 @@ a {
         text-align: center;
     }
     h3 {
-        color: $accent-color;
+        color: $primary-color;
         font-size: 1.75rem;
         font-weight: 700;
         @include for-tablet {
@@ -200,8 +200,7 @@ a {
 }
 
 .home-steps {
-    background: rgb(76, 165, 0);
-    background: linear-gradient(-90deg, rgba(76, 165, 0, 1) 0%, rgba(125, 194, 66, 1) 100%);
+    background: #f3f3ff;
     min-height: 800px;
     margin-bottom: 200px;
     @include for-tablet {
@@ -218,8 +217,15 @@ a {
 }
 
 .home-feedbacks {
-    background: rgb(76, 165, 0);
-    background: linear-gradient(-90deg, rgba(76, 165, 0, 1) 0%, rgba(125, 194, 66, 1) 100%);
+    background: #f3f3ff;
+    .feedbacks-content {
+        h2 {
+            color: $primary-color;
+        }
+        p {
+            color: #333;
+        }
+    }
 }
 
 .home-merchants {
@@ -232,14 +238,14 @@ a {
 .home-cta {
     .cta-content {
         h2 {
-            color: $accent-color;
+            color: $primary-color;
             margin-bottom: 2rem;
         }
     }
 }
 
 footer {
-    background: #eee;
+    background: #f3f3ff;
     .footer-about {
         p {
             color: $black;
@@ -290,11 +296,11 @@ footer .copyright-bar .copyright p {
 .steps-timeline {
     outline: 1px dashed rgba(red, $outline-width);
     @media screen and (max-width: $break-point) {
-        border-left: 2px dashed $white;
+        border-left: 2px dashed #352e81;
         margin-left: 25px;
     }
     @media screen and (min-width: $break-point) {
-        border-top: 2px dashed $white;
+        border-top: 2px dashed #352e81;
         padding-top: 20px;
         margin-top: 5rem;
         margin-left: 12%;
@@ -316,7 +322,7 @@ footer .copyright-bar .copyright p {
 .steps-three {
     outline: 1px dashed rgba(green, $outline-width);
     @media screen and (max-width: $break-point) {
-        margin-left: -25px;
+        margin-left: -28px;
     }
     @media screen and (min-width: $break-point) {
         float: left;
@@ -358,6 +364,8 @@ footer .copyright-bar .copyright p {
     @media screen and (max-width: $break-point) {
         float: left;
         margin-right: 20px;
+        width: 55px;
+        height: 55px;
     }
 }
 
@@ -369,7 +377,7 @@ footer .copyright-bar .copyright p {
 }
 
 .steps-name {
-    color: $white;
+    color: $primary-color;
     font-weight: 700;
     margin-top: 1rem;
     @extend .section-header;
@@ -385,8 +393,13 @@ footer .copyright-bar .copyright p {
 }
 
 .steps-description,
+.home-steps .steps-content h2 {
+    color: $primary-color;
+}
+
 .home-steps .steps-content p {
     overflow: hidden;
+    color: #333;
     @include for-tablet {
         font-size: 0.9rem;
     }
