@@ -201,8 +201,6 @@ a {
 
 .home-steps {
     background: #f3f3ff;
-    min-height: 800px;
-    margin-bottom: 200px;
     @include for-tablet {
         min-height: 100%;
         margin-bottom: 1rem;
@@ -240,6 +238,13 @@ a {
         h2 {
             color: $primary-color;
             margin-bottom: 2rem;
+        }
+        a {
+            color: $white;
+            font-weight: normal;
+        }
+        i {
+            margin-right: 6px;
         }
     }
 }
@@ -420,5 +425,230 @@ footer .copyright-bar .copyright p {
         @include for-tablet {
             display: block !important;
         }
+    }
+}
+
+.business-sub-container {
+    padding: 5rem 0;
+    margin-top: 99px;
+    min-height: 500px;
+    @include for-tablet {
+        padding: 3rem 1rem;
+    }
+    .pricing-content {
+        padding: 5rem 0;
+        @include for-tablet {
+            padding: 0 1rem;
+            text-align: center;
+        }
+        h2 {
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 2.25rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+.pricing-terms {
+    text-align: center;
+    @include for-tablet {
+        margin: 1rem 0;
+    }
+    img {
+        width: 105px;
+        margin-bottom: 1rem;
+    }
+    h6 {
+        font-size: 1rem;
+    }
+    h5 {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}
+
+.pricing-calculator {
+    background: $primary-color;
+    border-radius: 0.35rem;
+    @include for-tablet {
+        margin-top: 2rem;
+    }
+    .pricing-calculator-header {
+        padding: 2rem 1rem 1rem 1rem;
+        text-align: center;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.25);
+        h2 {
+            color: $white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        p {
+            color: $white;
+            font-size: 1rem;
+        }
+    }
+}
+
+.pricing-calculator-options {
+    padding: 1rem;
+    .input-group-text {
+        background: $white;
+        border: none;
+        font-weight: bold;
+    }
+    p {
+        color: $white;
+        font-size: 0.9rem;
+        @include for-phone {
+            font-size: 0.8rem;
+        }
+    }
+    .radio-list {
+        display: grid;
+        grid-template-columns: 111px 111px 111px 111px;
+        grid-gap: 10px;
+        @include for-phone {
+            display: block;
+            grid-template-columns: 100% 100% 100% 100%;
+        }
+    }
+    .radio-group {
+        padding: 0.75rem 0.35rem 0.5rem 0.35rem;
+        vertical-align: top;
+        border-radius: 4px;
+        text-align: center;
+        background: $white;
+        transition: all 0.25s ease-in-out;
+        &:hover {
+            transform: scale(0.95);
+        }
+        @include for-phone {
+            margin: 0.5rem 0;
+        }
+    }
+    .radio-active {
+        background: #1A1550;
+    }
+    .checkbox-custom,
+    .radio-custom {
+        opacity: 0;
+        position: absolute;
+    }
+    .checkbox-custom,
+    .checkbox-custom-label,
+    .radio-custom,
+    .radio-custom-label {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 5px;
+        cursor: pointer;
+        color: $primary-color;
+        font-size: 0.8rem;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.25;
+        transition: all 0.1s ease-in-out;
+    }
+    .checkbox-custom-label,
+    .radio-custom-label {
+        position: relative;
+    }
+    .checkbox-custom+.checkbox-custom-label:before,
+    .radio-custom+.radio-custom-label:before {
+        content: '';
+        border: none;
+        display: block;
+        vertical-align: middle;
+        width: 25px;
+        height: 25px;
+        padding: 4px;
+        margin: 0 auto 5px auto;
+        text-align: center;
+        border: solid 1px #1A1550;
+        transition: all 0.1s ease-in-out;
+    }
+    .checkbox-custom:checked+.checkbox-custom-label:before {
+        content: url('../images/others/for-business/radio-check.svg');
+        background: $accent-color;
+        border-color: $accent-color;
+    }
+    .radio-custom+.radio-custom-label:before {
+        border-radius: 50%;
+    }
+    .radio-custom:checked+.radio-custom-label:before {
+        content: url('../images/others/for-business/radio-check.svg');
+        background: $accent-color;
+        border-color: $accent-color;
+    }
+    // .checkbox-custom:focus+.checkbox-custom-label,
+    // .radio-custom:focus+.radio-custom-label {
+    //     outline: 1px solid #ddd;
+    //     /* focus style */
+    // }
+}
+
+.pricing-breakdown {
+    background: #1A1550;
+    border-radius: 0.25rem;
+    padding: 1.5rem;
+    hr {
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+    .pricing-breakdown-table {
+        table {
+            margin-bottom: 0;
+        }
+        tr,
+        td {
+            color: $white;
+            padding: 0;
+            @include for-phone {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+.pricing-large {
+    background: #EEEEFF;
+    padding: 5rem 0 0 0;
+    border-bottom: solid 1px #ccc;
+    .pricing-large-content {
+        text-align: center;
+        h2 {
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        img {
+            width: 600px;
+        }
+    }
+}
+
+#pricing-modal {
+    .modal-content {
+        max-height: 500px;
+    }
+    .modal-body {
+        padding: 1rem 2rem 3rem 2rem;
+    }
+}
+
+.contact-features {
+    margin: 1rem 0;
+    img {
+        width: 100%;
+        @include for-phone {
+            width: 150px;
+        }
+    }
+    h6 {
+        margin-bottom: 0.5rem;
     }
 }

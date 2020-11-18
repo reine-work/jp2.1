@@ -410,7 +410,7 @@ input[type=number] {
 }
 
 #error-msg {
-    color: #dc3545;
+    color: #f00;
     font-size: 0.8rem;
 }
 
@@ -418,7 +418,7 @@ input[type=number] {
     position: relative;
     .mobile-validation {
         position: absolute;
-        top: 9px;
+        top: 6px;
         right: 15px;
     }
 }

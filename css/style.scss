@@ -429,15 +429,15 @@ textarea {
 }
 
 #main-banner {
-    min-height: 85vh;
+    min-height: 68vh;
     background: url('../images/banners/banner-graphic.svg') no-repeat bottom center;
     background-size: cover;
     position: relative;
     @include for-tablet {
-        min-height: 85vh;
+        min-height: 65vh;
     }
     @include for-phone {
-        min-height: 100vh;
+        min-height: 75vh;
     }
     @include for-phone-landscape() {
         min-height: 120vh;
@@ -488,21 +488,22 @@ textarea {
 .scan-qr {
     display: block;
     margin-top: 1rem;
-    @include for-desktop-up {
-        display: none;
-    }
+    // @include for-desktop-up {
+    //     display: none;
+    // }
     p {
         color: $white;
         margin: 0 0 1.5rem 0;
     }
     a {
         background: $accent-color;
-        color: $white;
-        padding: 15px 20px 10px 20px;
+        color: $white !important;
         border-radius: 4px;
-        span {
+        i {
             font-size: 20px;
-            margin-right: 10px;
+            margin-right: 6px;
+            position: relative;
+            top: 2px;
         }
     }
 }
@@ -690,7 +691,10 @@ footer {
     background: #241e5c;
     background: linear-gradient(90deg, rgba(36, 30, 92, 1) 0%, rgba(81, 50, 149, 1) 100%);
     .footer-bar {
-        padding: 5rem 2rem;
+        padding: 5rem 1rem;
+        @include for-desktop-md {
+            padding: 4rem 1rem;
+        }
         @include for-tablet {
             padding: 3rem 1rem;
         }
@@ -1649,13 +1653,13 @@ ul.social-icons {
         cursor: default;
     }
     .example.example2 .input.focused+label {
-        color: #24b47e;
+        color: $primary-color;
     }
     .example.example2 .input.invalid+label {
         color: #ffa27b;
     }
     .example.example2 .input.focused+label+.baseline {
-        background-color: #24b47e;
+        background-color: $primary-color;
     }
     .example.example2 .input.focused.invalid+label+.baseline {
         background-color: #e25950;
@@ -1682,14 +1686,20 @@ ul.social-icons {
     }
     .example.example2 button {
         display: block;
-        height: 45px;
-        margin: 40px 0;
-        background-color: #24b47e;
+        height: 50px;
+        margin: 40px 0 0 0;
+        background-color: $primary-color;
         border-radius: 4px;
         color: #fff;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-weight: 600;
         cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+            box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+        }
     }
     .example.example2 .error svg {
         margin-top: 0 !important;
@@ -1707,7 +1717,7 @@ ul.social-icons {
         stroke: #abe9d2;
     }
     .example.example2 .success .icon .checkmark {
-        stroke: #24b47e;
+        stroke: $primary-color;
     }
     .example.example2 .success .title {
         color: #32325d;
@@ -1718,7 +1728,7 @@ ul.social-icons {
         font-size: 13px !important;
     }
     .example.example2 .success .reset path {
-        fill: #24b47e;
+        fill: $primary-color;
     }
 }
 
@@ -2377,6 +2387,7 @@ ul.social-icons {
             width: 200px;
             border-radius: 100%;
             margin-bottom: 1rem;
+            border: solid 1px #ddd;
         }
         .team-avatar {
             position: absolute;
@@ -2565,27 +2576,27 @@ button[aria-expanded='false']>.faq-icon {
     @include for-desktop-md {
         padding: 1.5rem 1rem;
     }
-    .partners-title {
-        border-right: solid 1px #999;
-        padding-right: 1rem;
-        p {
-            font-size: 1rem;
-            margin: 0;
-            padding: 0;
-            max-width: 20ch;
-            @include for-desktop-md {
-                font-size: 0.9rem;
-                max-width: 50ch;
-            }
-            @include for-tablet {
-                max-width: 100%;
-                margin-bottom: 2rem;
-                font-size: 1rem;
-            }
+}
+
+.slider-home-payments {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    text-align: center;
+    margin: 0 auto;
+    li {
+        list-style: none;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0 1.5rem;
+        img {
+            width: auto !important;
+            height: 35px;
         }
-        @include for-tablet {
-            border: none;
-            text-align: center;
+    }
+    .owl-item {
+        img {
+            margin: 0 auto;
         }
     }
 }
@@ -2638,24 +2649,25 @@ button[aria-expanded='false']>.faq-icon {
 
 // horizontal timeline
 .home-steps {
-    background: #241e5c;
-    background: linear-gradient(90deg, rgba(36, 30, 92, 1) 0%, rgba(81, 50, 149, 1) 100%);
-    padding: 5rem 0;
-    min-height: 700px;
-    margin-bottom: 275px;
+    background: #ececfb;
+    padding: 5rem 0 2rem 0;
+    @include for-desktop-md {
+        padding: 4rem 1rem;
+    }
     @include for-tablet {
         padding: 3rem 1rem 0 1rem;
-        min-height: 600px;
         margin-bottom: 0;
+    }
+    @include for-phone {
+        overflow: hidden;
     }
     .steps-content {
         text-align: center;
         h2 {
-            color: $white;
             font-size: 2rem;
         }
         p {
-            color: $white;
+            color: #333;
             font-size: 1rem;
         }
     }
@@ -2694,25 +2706,17 @@ button[aria-expanded='false']>.faq-icon {
     }
 }
 
-.timeline-video {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    @include for-tablet {
-        margin-top: 3rem;
-        position: relative;
-    }
-}
-
 .home-merchants {
     text-align: center;
-    padding: 3rem 0 5rem 0;
+    padding: 5rem 0;
     @include for-desktop-md {
-        padding: 1.5rem 1rem;
+        padding: 4rem 1rem;
     }
     @include for-tablet {
         padding: 3rem 1rem;
+    }
+    @include for-phone {
+        padding: 3rem 0;
     }
     .merchants-title {
         border-right: solid 1px #999;
@@ -2753,6 +2757,9 @@ button[aria-expanded='false']>.faq-icon {
     background: #241e5c;
     background: linear-gradient(90deg, rgba(36, 30, 92, 1) 0%, rgba(81, 50, 149, 1) 100%);
     padding: 5rem 0;
+    @include for-desktop-md {
+        padding: 4rem 1rem;
+    }
     @include for-tablet {
         padding: 3rem 1rem;
     }
@@ -2816,7 +2823,9 @@ button[aria-expanded='false']>.faq-icon {
 }
 
 .home-cta {
-    padding: 3rem 0;
+    padding: 5rem 0;
+    background: #fafafa;
+    text-align: center;
     @include for-tablet {
         padding: 3rem 1rem;
     }
@@ -2828,23 +2837,33 @@ button[aria-expanded='false']>.faq-icon {
             color: $primary-color;
         }
         p {
-            margin: 0;
+            margin: 0.5rem 0 0 0;
             padding: 0;
             @include for-tablet {
                 margin-bottom: 1rem;
             }
         }
         a {
-            font-size: 1.1rem;
+            font-weight: 700;
+            color: $accent-color;
+        }
+        @include for-tablet {
+            text-align: center;
+        }
+    }
+    .cta-button-content {
+        a {
+            color: $white;
             i {
                 margin-right: 1rem;
                 font-size: 1.5rem;
                 position: relative;
                 top: 2px;
             }
-        }
-        @include for-tablet {
-            text-align: center;
+            @include for-phone {
+                margin: 1rem 0 0 0;
+                display: block;
+            }
         }
     }
 }
@@ -2864,11 +2883,11 @@ button[aria-expanded='false']>.faq-icon {
 .steps-timeline {
     outline: 1px dashed rgba(red, $outline-width);
     @media screen and (max-width: $break-point) {
-        border-left: 2px dashed $white;
+        border-left: 2px dashed $primary-color;
         margin-left: 25px;
     }
     @media screen and (min-width: $break-point) {
-        border-top: 2px dashed $white;
+        border-top: 2px dashed $primary-color;
         padding-top: 20px;
         margin-top: 5rem;
         margin-left: 12%;
@@ -2881,7 +2900,8 @@ button[aria-expanded='false']>.faq-icon {
     }
     @include for-phone {
         margin-top: 3rem;
-        margin-bottom: 5rem;
+        margin-bottom: 17.8rem;
+        border: none;
     }
 }
 
@@ -2896,6 +2916,9 @@ button[aria-expanded='false']>.faq-icon {
         float: left;
         width: 33%;
         margin-top: -50px;
+    }
+    @include for-phone {
+        text-align: center;
     }
 }
 
@@ -2915,7 +2938,7 @@ button[aria-expanded='false']>.faq-icon {
 
 .steps-three {
     @media screen and (max-width: $break-point) {
-        margin-bottom: -100%;
+        margin-bottom: -80%;
     }
     @media screen and (min-width: $break-point) {
         margin-left: 15%;
@@ -2933,28 +2956,50 @@ button[aria-expanded='false']>.faq-icon {
         float: left;
         margin-right: 20px;
     }
-}
-
-.steps-description {
-    margin: 1rem 0 0 0;
     @include for-phone {
-        text-align: left;
+        margin: 0;
+        float: none;
+        display: inline-block;
     }
 }
 
+.steps-description {
+    margin: 1rem 0;
+    height: 72px;
+    color: #333;
+    @include for-tablet-landscape {
+        height: 108px;
+    }
+    @include for-tablet {
+        height: 108px;
+    }
+    @include for-phone {
+        height: auto;
+    }
+}
+
+.ss-step {
+    width: 300px;
+}
+
 .steps-name {
-    color: $white;
+    color: $primary-color;
     font-weight: 700;
     margin-top: 1rem;
     @extend .section-header;
     @include for-tablet {
         font-size: 1rem;
+        height: 40px;
+    }
+    @include for-tablet-landscape {
+        font-size: 1.2rem;
     }
     @media screen and (min-width: $break-point) {
         text-align: center;
     }
-    @include for-phone {
-        text-align: left;
+    @include for-tablet {
+        font-size: 1rem;
+        height: auto;
     }
 }
 
@@ -2969,6 +3014,62 @@ button[aria-expanded='false']>.faq-icon {
     }
 }
 
+.steps-content {
+    .nav-tabs {
+        border-bottom: none !important;
+    }
+}
+
+.timeline-video {
+    @include for-phone {
+        display: none;
+    }
+}
+
 .nav-cta-resp {
     padding: 0 1rem;
+}
+
+.security-logos {
+    img {
+        height: 50px;
+        margin: 1rem 2rem;
+        @include for-tablet {
+            height: 45px;
+            margin: 1rem;
+        }
+        @include for-phone {
+            height: 45px;
+            margin: 1rem;
+        }
+    }
+}
+
+.pr-logos {
+    img {
+        height: 55px;
+        margin: 1rem;
+        filter: grayscale(100%);
+        opacity: 0.5;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+    }
+}
+
+// testing parallax bg
+.steps-parallax-bg1 {
+    background: url('../images/others/steps/ezgif-7-328c01f53b47.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 15% 55%;
+    height: 100vh;
+}
+
+.steps-parallax-content {
+    height: 100vh;
+    display: grid;
+    place-items: start center;
 }
