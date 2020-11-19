@@ -1281,11 +1281,17 @@ ul.social-icons li img {
   margin: 0 0 6px 0;
   padding: 0;
   line-height: 1;
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .user-info p {
+    margin-bottom: 1rem !important;
+  }
 }
 
 .user-info a {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #7dc242;
 }
 

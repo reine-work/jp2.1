@@ -40,7 +40,17 @@
                             <div class="nav-cta-resp"></div>
                         </div>
                         <form class="form-inline nav-cta my-2 my-lg-0">
-                            <a href="user-login.html" class="btn btn-outline-light my-2 mr-2 my-sm-0"><i class="las la-lock"></i> Sign In</a>
+                            <div class="dropdown">
+                                <a href="user-login.html" class="btn btn-outline-light my-2 mr-2 my-sm-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John <i class="las la-angle-down"></i></a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="user-change-password.html">Change Password</a>
+                                    <a class="dropdown-item" href="user-my-profile.html">Update Profile</a>
+                                    <a class="dropdown-item" href="user-my-payments.html">View Payments</a>
+                                    <a class="dropdown-item" href="index.html">Sign out</a>
+                                </div>
+                            </div>
+
                             <a href="for-business.html" class="btn btn-light my-2 my-sm-0"><i class="las la-briefcase"></i> JazzyPay for Business</a>
                         </form>
                     </div>
@@ -60,7 +70,7 @@
                             <img src="images/others/sample-user.jpg">
                             <h6>John Doe</h6>
                             <p>johndoe@email.com</p>
-                            <a href="index.html">Logout</a>
+                            <a href="index.html"><i class="las la-external-link-alt"></i> Logout</a>
                         </div>
                         <div class="user-sidebar">
                             <div class="list-group">

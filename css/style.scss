@@ -1122,10 +1122,13 @@ ul.social-icons {
         margin: 0 0 6px 0;
         padding: 0;
         line-height: 1;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        @include for-phone {
+            margin-bottom: 1rem !important;
+        }
     }
     a {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         color: $accent-color;
     }
 }
