@@ -772,7 +772,7 @@ footer {
             padding: 3rem 1rem;
         }
         .copyright {
-            opacity: 0.25;
+            opacity: 0.5;
             text-align: center;
             p {
                 color: $white;
@@ -2625,7 +2625,7 @@ button[aria-expanded='false']>.faq-icon {
 }
 
 .home-intro {
-    padding-top: 4rem;
+    padding: 4rem 1rem 3rem 1rem;
     .intro-content {
         text-align: center;
         p {
