@@ -35,7 +35,7 @@ jQuery(document).ready(function() {
         jQuery('.slider-home-payments').trigger('play.owl.autoplay', [1500]);
     }
 
-    setTimeout(setSpeed, 10);
+    setTimeout(setSpeed, 1500);
 });
 
 // $('.slider-home-payments').owlCarousel({
