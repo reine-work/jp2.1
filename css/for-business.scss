@@ -95,9 +95,34 @@ a {
     cursor: pointer;
 }
 
+#sticky.stick {
+    z-index: 999;
+}
+
 #main-nav {
-    background: $white;
-    border-bottom: solid 1px #f0f0f0;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(225, 225, 255, 1) 100%);
+    z-index: 999;
+    .navbar-nav {
+        li {
+            @include for-tablet-landscape {
+                margin: 0 0.75rem;
+            }
+        }
+        .nav-link {
+            @include for-tablet-landscape {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.navbar-toggler {
+    transform: scale(0.8);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $primary-color;
 }
 
 #main-nav .navbar-dark .navbar-nav .nav-link {
@@ -105,25 +130,61 @@ a {
 }
 
 #main-banner {
-    background: #f3f3ff url(../images/banners/banner-for-business.svg) center bottom no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    @include for-tablet {
-        background: #f3f3ff;
-    }
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(225, 225, 255, 1) 100%);
     .banner-caption {
+        position: relative;
+        max-width: 1300px;
+        min-height: 100vh;
+        margin-top: 0;
+        text-align: left;
+        .banner-caption-float {
+            position: absolute;
+            left: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 100%;
+            @include for-phone {
+                width: 90%;
+            }
+        }
         @include for-tablet {
             margin-top: 58px;
+            min-height: 60vh;
+        }
+        @include for-phone {
+            margin-top: 58px;
+            min-height: 80vh;
         }
         h2 {
             color: $primary-color;
-            font-size: 2.25rem;
+            font-size: 3.75rem;
+            letter-spacing: -2px;
             @include for-tablet {
-                font-size: 2rem;
+                font-size: 3rem;
+            }
+            @include for-tablet {
+                font-size: 2.5rem;
             }
         }
         p {
             color: $black;
+            font-size: 1.5rem;
+            @include for-tablet {
+                font-size: 1rem;
+            }
+        }
+    }
+    .banner-screens {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        img {
+            width: 43vw;
+            image-rendering: auto;
+        }
+        @include for-tablet {
+            display: none;
         }
     }
 }
@@ -144,6 +205,7 @@ a {
 }
 
 .home-intro {
+    padding-bottom: 0;
     @include for-tablet {
         padding: 3rem 1rem;
     }
@@ -200,11 +262,197 @@ a {
 }
 
 .home-steps {
-    background: #f3f3ff;
+    background: #ececfb;
+    padding: 5rem 0 2rem 0;
+    @include for-desktop-md {
+        padding: 4rem 1rem;
+    }
     @include for-tablet {
-        min-height: 100%;
-        margin-bottom: 1rem;
         padding: 3rem 1rem 0 1rem;
+        margin-bottom: 0;
+    }
+    @include for-phone {
+        overflow: hidden;
+    }
+    .steps-content {
+        text-align: center;
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            color: #333;
+            font-size: 1rem;
+        }
+    }
+}
+
+.steps-header {
+    @extend .section-header;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.steps-timeline {
+    outline: 1px dashed rgba(red, $outline-width);
+    @media screen and (max-width: $break-point) {
+        border-left: 2px dashed $primary-color;
+        margin-left: 25px;
+    }
+    @media screen and (min-width: $break-point) {
+        border-top: 2px dashed $primary-color;
+        padding-top: 20px;
+        margin-top: 5rem;
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    @include for-phone {
+        margin-top: 3rem;
+        margin-bottom: 17.8rem;
+        border: none;
+    }
+}
+
+.steps-one,
+.steps-two,
+.steps-three {
+    outline: 1px dashed rgba(green, $outline-width);
+    @media screen and (max-width: $break-point) {
+        margin-left: -25px;
+    }
+    @media screen and (min-width: $break-point) {
+        float: left;
+        width: 33%;
+        margin-top: -50px;
+    }
+    @include for-phone {
+        text-align: center;
+    }
+}
+
+.steps-one,
+.steps-two {
+    @media screen and (max-width: $break-point) {
+        padding-bottom: 40px;
+    }
+}
+
+.steps-one {
+    @media screen and (min-width: $break-point) {
+        margin-left: -15%;
+        margin-right: 15%;
+    }
+}
+
+.steps-three {
+    @media screen and (max-width: $break-point) {
+        margin-bottom: -80%;
+    }
+    @media screen and (min-width: $break-point) {
+        margin-left: 15%;
+        margin-right: -15%;
+    }
+}
+
+.steps-img {
+    display: block;
+    margin: auto;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    @media screen and (max-width: $break-point) {
+        float: left;
+        margin-right: 20px;
+    }
+    @include for-phone {
+        margin: 0;
+        float: none;
+        display: inline-block;
+    }
+}
+
+.steps-animate {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    .ss-step {
+        position: relative;
+        z-index: 9;
+    }
+    .steps-hover {
+        position: absolute;
+        width: 300px;
+        bottom: 0;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+    &:hover {
+        .steps-hover {
+            display: none;
+        }
+    }
+}
+
+.steps-description {
+    margin: 1rem 0;
+    height: 100px;
+    color: #333;
+    @include for-tablet-landscape {
+        height: 108px;
+    }
+    @include for-tablet {
+        height: 108px;
+    }
+    @include for-phone {
+        height: auto;
+    }
+}
+
+.ss-step {
+    width: 300px;
+}
+
+.steps-name {
+    color: $primary-color;
+    font-weight: 700;
+    margin-top: 1rem;
+    @extend .section-header;
+    @include for-tablet {
+        font-size: 1rem;
+        height: 40px;
+    }
+    @include for-tablet-landscape {
+        font-size: 1.2rem;
+    }
+    @media screen and (min-width: $break-point) {
+        text-align: center;
+    }
+    @include for-tablet {
+        font-size: 1rem;
+        height: auto;
+    }
+}
+
+.steps-description,
+.home-steps .steps-content p {
+    overflow: hidden;
+    @include for-tablet {
+        font-size: 0.9rem;
+    }
+    @media screen and (min-width: $break-point) {
+        text-align: center;
+    }
+}
+
+.steps-content {
+    .nav-tabs {
+        border-bottom: none !important;
     }
 }
 
@@ -214,8 +462,26 @@ a {
     }
 }
 
+.home-play-button {
+    position: relative;
+    bottom: -50px;
+    h3 {
+        color: $primary-color;
+        font-size: 1.75rem;
+        font-weight: 700;
+        @include for-tablet {
+            font-size: 1.5rem;
+        }
+    }
+    p {
+        @include for-tablet {
+            font-size: 0.9rem;
+        }
+    }
+}
+
 .home-feedbacks {
-    background: #f3f3ff;
+    background: #ececfb;
     .feedbacks-content {
         h2 {
             color: $primary-color;
@@ -227,7 +493,8 @@ a {
 }
 
 .home-merchants {
-    padding: 3rem 0 5rem 0;
+    padding: 3rem 0;
+    border-bottom: solid 1px #f0f0f0;
     @include for-tablet {
         padding: 3rem 1rem 5rem 1rem;
     }
@@ -250,7 +517,7 @@ a {
 }
 
 footer {
-    background: #f3f3ff;
+    background: #ececfb;
     .footer-about {
         p {
             color: $black;
@@ -290,127 +557,6 @@ footer .copyright-bar .copyright p {
     color: $primary-color;
     font-weight: 400;
     font-size: 1.4em;
-}
-
-.steps-header {
-    @extend .section-header;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.steps-timeline {
-    outline: 1px dashed rgba(red, $outline-width);
-    @media screen and (max-width: $break-point) {
-        border-left: 2px dashed #352e81;
-        margin-left: 25px;
-    }
-    @media screen and (min-width: $break-point) {
-        border-top: 2px dashed #352e81;
-        padding-top: 20px;
-        margin-top: 5rem;
-        margin-left: 12%;
-        margin-right: 12%;
-    }
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    @include for-phone {
-        margin-top: 3rem;
-        margin-bottom: 5rem;
-    }
-}
-
-.steps-one,
-.steps-two,
-.steps-three {
-    outline: 1px dashed rgba(green, $outline-width);
-    @media screen and (max-width: $break-point) {
-        margin-left: -28px;
-    }
-    @media screen and (min-width: $break-point) {
-        float: left;
-        width: 33%;
-        margin-top: -50px;
-    }
-}
-
-.steps-one,
-.steps-two {
-    @media screen and (max-width: $break-point) {
-        padding-bottom: 40px;
-    }
-}
-
-.steps-one {
-    @media screen and (min-width: $break-point) {
-        margin-left: -15%;
-        margin-right: 15%;
-    }
-}
-
-.steps-three {
-    @media screen and (max-width: $break-point) {
-        margin-bottom: -100%;
-    }
-    @media screen and (min-width: $break-point) {
-        margin-left: 15%;
-        margin-right: -15%;
-    }
-}
-
-.steps-img {
-    display: block;
-    margin: auto;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    @media screen and (max-width: $break-point) {
-        float: left;
-        margin-right: 20px;
-        width: 55px;
-        height: 55px;
-    }
-}
-
-.steps-description {
-    margin: 1rem 0 0 0;
-    @include for-phone {
-        text-align: left;
-    }
-}
-
-.steps-name {
-    color: $primary-color;
-    font-weight: 700;
-    margin-top: 1rem;
-    @extend .section-header;
-    @include for-tablet {
-        font-size: 1rem;
-    }
-    @media screen and (min-width: $break-point) {
-        text-align: center;
-    }
-    @include for-phone {
-        text-align: left;
-    }
-}
-
-.steps-description,
-.home-steps .steps-content h2 {
-    color: $primary-color;
-}
-
-.home-steps .steps-content p {
-    overflow: hidden;
-    color: #333;
-    @include for-tablet {
-        font-size: 0.9rem;
-    }
-    @media screen and (min-width: $break-point) {
-        text-align: center;
-    }
 }
 
 .nav-cta {
@@ -651,4 +797,23 @@ footer .copyright-bar .copyright p {
     h6 {
         margin-bottom: 0.5rem;
     }
+}
+
+// sprite
+@keyframes logo-sprite-animation {
+    from {
+        background-position: 0px 0;
+    }
+    to {
+        background-position: -1676px 0;
+    }
+}
+
+.merchant-sprite {
+    margin-top: 2rem;
+    height: 100px;
+    width: 100%;
+    background-image: url('../images/others/merchants/merchant-sprite.jpg');
+    background-repeat: repeat-x;
+    animation: logo-sprite-animation 15s linear infinite;
 }

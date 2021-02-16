@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
     <link rel="icon" href="images/misc/jazzypay-favicon.ico" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="plugins/owl-carousel/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -58,10 +57,12 @@
                             </ul>
                             <div class="nav-cta-resp"></div>
                         </div>
-                        <form class="form-inline nav-cta my-2 my-lg-0">
-                            <a href="user-my-profile.html" class="btn btn-outline-light my-2 mr-2 my-sm-0"><i class="las la-lock"></i> Sign In</a>
-                            <a href="for-business.html" class="btn btn-light my-2 my-sm-0"><i class="las la-briefcase"></i> JazzyPay for Business</a>
-                        </form>
+                        <div class="nav-cta">
+                            <form class="form-inline my-2 my-lg-0">
+                                <a href="user-my-profile.html" class="btn btn-outline-light my-2 mr-2 my-sm-0"><i class="las la-lock"></i> Sign In</a>
+                                <a href="for-business.html" class="btn btn-light my-2 my-sm-0"><i class="las la-briefcase"></i> JazzyPay for Business</a>
+                            </form>
+                        </div>
                     </div>
 
                 </nav>
@@ -119,41 +120,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-md-center">
                     <div class="col-lg-12">
-                        <ul class="slider-home-payments owl-carousel owl-theme">
-                            <!-- cards -->
-                            <li><img src="images/others/cards-logo/amex.png" alt=""></li>
-                            <li><img src="images/others/cards-logo/mastercard.png" alt=""></li>
-                            <li><img src="images/others/cards-logo/visa.png" alt=""></li>
-                            <!-- banks -->
-                            <li><img src="images/others/bank-logos/aub.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/bdo.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/bpi.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/chinabank.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/landbank.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/maybank.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/metrobank.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/psbank.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/rcbc.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/robinsonsbank.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/security-bank.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/ucpb.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/unionbank.png" alt=""></li>
-                            <!-- <li><img src="images/others/bank-logos/eastwest.png" alt=""></li>
-                            <li><img src="images/others/bank-logos/pnb.png" alt=""></li> -->
-                            <!-- e-wallets -->
-                            <li><img src="images/others/ewallet-logos/Alipay-logo.png" alt=""></li>
-                            <li><img src="images/others/ewallet-logos/coinsph.png" alt=""></li>
-                            <li><img src="images/others/ewallet-logos/gcash.png" alt=""></li>
-                            <li><img src="images/others/ewallet-logos/grabpay.png" alt=""></li>
-                            <!-- otc -->
-                            <li><img src="images/others/otc-logos/bayadcenter.png" alt=""></li>
-                            <li><img src="images/others/otc-logos/cebuana.png" alt=""></li>
-                            <li><img src="images/others/otc-logos/lbc.png" alt=""></li>
-                            <li><img src="images/others/otc-logos/mlhuillier.png" alt=""></li>
-                            <li><img src="images/others/otc-logos/palawan.png" alt=""></li>
-                            <li><img src="images/others/otc-logos/rdpawnshop.png" alt=""></li>
-                            <li><img src="images/others/otc-logos/sm.png" alt=""></li>
-                        </ul>
+                        <div class="logo-sprite"></div>
                     </div>
                 </div>
             </div>
@@ -182,7 +149,7 @@
             </div>
         </div>
 
-        <div class="home-steps">
+        <div class="home-steps" id="sec-how-to-pay">
             <div class="container">
                 <div class="row justify-content-md-center">
                     <div class="col-lg-12">
@@ -190,24 +157,20 @@
                             <h2 class="home-title">
                                 How it works
                             </h2>
-                            <!-- <p data-aos="fade-up" data-aos-delay="100">Making secure online payments with JazzyPay is as simple as 1-2-3.
-                            </p> -->
-
                             <div class="steps-timeline">
-
                                 <div class="steps-one">
                                     <img class="steps-img" src="images/others/step1.png" alt="" />
                                     <h3 class="steps-name">
-                                        Search merchant
+                                        Scan QR / Search
                                     </h3>
                                     <p class="steps-description">
-                                        Search for the merchant you’d like to pay via the search bar or by scanning the store’s unique QR Code.
+                                        Enter the name of the company you’d like to pay or Scan their QR Code.
                                     </p>
                                     <div class="steps-animate">
-                                        <img src="images/others/steps/step-1.gif" class="ss-step" />
-                                        <div class="steps-hover">
-                                            <img src="images/others/steps/step-1.jpg" alt="" />
-                                        </div>
+                                        <video width="300" height="500" class="ss-step" autoplay loop muted>
+                                            <source src="images/others/steps/step-1.webm" type="video/webm">
+                                            Your browser does not support the video tag.
+                                        </video>
                                     </div>
                                 </div>
 
@@ -217,53 +180,33 @@
                                         Select payment method
                                     </h3>
                                     <p class="steps-description">
-                                        Select your preferred payment method from 27 options.
+                                        Enter payment details and choose your payment option from Credit or Debit Cards, Online Bank Payments, E-Wallets or Over-the-counter cash deposits.
                                     </p>
                                     <div class="steps-animate">
-                                        <img src="images/others/steps/step-2.gif" class="ss-step" />
-                                        <div class="steps-hover">
-                                            <img src="images/others/steps/step-2.jpg" alt="" />
-                                        </div>
+                                        <video width="300" height="500" class="ss-step" autoplay loop muted>
+                                            <source src="images/others/steps/step-2.webm" type="video/webm">
+                                            Your browser does not support the video tag.
+                                        </video>
                                     </div>
                                 </div>
 
                                 <div class="steps-three">
                                     <img class="steps-img" src="images/others/step3.png" alt="" />
                                     <h3 class="steps-name">
-                                        Submit payment
+                                        Review and pay
                                     </h3>
                                     <p class="steps-description">
-                                        Submit the payment form with your payment details then it's done!
+                                        Review your payment details and proceed with your selected payment option.
                                     </p>
                                     <div class="steps-animate">
-                                        <img src="images/others/steps/step-3.gif" class="ss-step" />
-                                        <div class="steps-hover">
-                                            <img src="images/others/steps/step-3.jpg" alt="" />
-                                        </div>
+                                        <video width="300" height="500" class="ss-step" autoplay loop muted>
+                                            <source src="images/others/steps/step-3.webm" type="video/webm">
+                                            Your browser does not support the video tag.
+                                        </video>
                                     </div>
                                 </div>
 
                             </div>
-
-                            <!-- <div class="timeline-video mt-5">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-8">
-                                        <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="tab-search" role="tabpanel" aria-labelledby="home-tab">
-                                                <img src="images/others/step1-graphic.png" />
-                                            </div>
-
-                                            <div class="tab-pane fade" id="tab-select" role="tabpanel" aria-labelledby="home-tab">
-                                                <img src="images/others/step2-graphic.png" />
-                                            </div>
-
-                                            <div class="tab-pane fade" id="tab-submit" role="tabpanel" aria-labelledby="home-tab">
-                                                <img src="images/others/step3-graphic.png" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
 
                         </div>
                     </div>
@@ -402,15 +345,15 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="pr-logos text-center">
-                            <img src="images/others/partners/abs-cbn.png" />
-                            <img src="images/others/partners/adobo-magazine.png" />
-                            <img src="images/others/partners/business-mirror.png" />
-                            <img src="images/others/partners/manila-bulletin-logo.png" />
-                            <img src="images/others/partners/fintech-singapore.png" />
-                            <img src="images/others/partners/bworldonline.png" />
-                            <img src="images/others/partners/e27.png" />
-                            <img src="images/others/partners/deal-street-asia-logo.png" />
-                            <img src="images/others/partners/techshake.png" />
+                            <a href="https://news.abs-cbn.com/life/09/11/20/shopping-shorts-grandparents-day-initiative-vip-shopping-rewards" target="_blank"><img src="images/others/partners/abs-cbn.png" /></a>
+                            <a href="https://www.adobomagazine.com/press-release/brand-business-jazzypay-enables-essential-businesses-in-the-philippines-to-adopt-cashless-payments-in-the-new-normal/" target="_blank"><img src="images/others/partners/adobo-magazine.png" /></a>
+                            <a href="https://businessmirror.com.ph/2020/09/14/local-fintech-start-up-raises-additional-funds/" target="_blank"><img src="images/others/partners/business-mirror.png" /></a>
+                            <a href="https://mb.com.ph/2020/09/10/essential-businesses-to-adopt-cashless-payments-in-the-new-normal/" target="_blank"><img src="images/others/partners/manila-bulletin-logo.png" /></a>
+                            <a href="http://fintechnews.sg/25203/philippines/philippines-fintech-report-2018/?fbclid=IwAR2vHLbThcKr3gix93i6PtBCHuaBsM2J3iof7V-l1RVAsGeWAGmdec53WQk" target="_blank"><img src="images/others/partners/fintech-singapore.png" /></a>
+                            <a href="https://www.bworldonline.com/jazzypay-looks-to-diversify-partner-merchants-for-e-payments/" target="_blank"><img src="images/others/partners/bworldonline.png" /></a>
+                            <a href="https://e27.co/jazzypay-raises-us500k-from-cocoon-capital-to-help-businesses-adopt-cashless-payments-amid-covid-19-20200910/" target="_blank"><img src="images/others/partners/e27.png" /></a>
+                            <a href="https://www.dealstreetasia.com/stories/mosaic-solutions-jazzypay-funding-206330/" target="_blank"><img src="images/others/partners/deal-street-asia-logo.png" /></a>
+                            <a href="https://www.techshake.asia/articles/235-jazzypay?fbclid=IwAR1QZAAc--RywlIe_U7pU7hajHAjecVPyW3wvUCp2zz3kUQhjnoIe-YFfI8" target="_blank"><img src="images/others/partners/techshake.png" /></a>
                         </div>
                     </div>
                 </div>
@@ -429,7 +372,7 @@
                         </div>
                         <div class="cta-button-content mt-3">
                             <a href="for-business.html" class="btn btn-secondary"><i class="las la-edit"></i> Sign up Business</a>
-                            <a href="for-business.html" class="btn btn-secondary"><i class="las la-comments"></i> Inquire Now</a>
+                            <a href="for-business-contact.html" class="btn btn-secondary"><i class="las la-comments"></i> Contact Business</a>
                         </div>
                     </div>
                 </div>
@@ -546,14 +489,13 @@
 
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
 
     <script src="js/partner-slider.js"></script>
-    <script src="js/navbar.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/navbar.js"></script>
 
     <!-- New QR Scanner -->
     <!-- <script src="js/jsQR.js"></script>

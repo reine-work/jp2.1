@@ -52,7 +52,7 @@
                     </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav navbar-center">
+                            <ul class="navbar-nav ml-auto">
                                 <li class="nav-item"><a href="#sec-features" class="nav-link">Features</a></li>
                                 <li class="nav-item"><a href="#sec-feedbacks" class="nav-link">Feedbacks</a></li>
                                 <li class="nav-item"><a href="#sec-contact" class="nav-link">Contact</a></li>
@@ -60,10 +60,12 @@
                             </ul>
                             <div class="nav-cta-resp"></div>
                         </div>
-                        <form class="form-inline nav-cta my-2 my-lg-0">
-                            <a href="user-login.html" class="btn btn-outline-dark my-2 mr-2 my-sm-0" type="submit"><i class="las la-lock"></i> Merchant Login</a>
-                            <a href="merchant-register-2.html" class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="las la-briefcase"></i> Register</a>
-                        </form>
+                        <div class="nav-cta">
+                            <form class="form-inline my-2 my-lg-0">
+                                <button type="button" data-toggle="modal" data-target="#merchant-login-prompt" class="btn btn-outline-dark my-2 mr-2 my-sm-0" type="submit"><i class="las la-lock"></i> Merchant Login</button>
+                                <button type="button" data-toggle="modal" data-target="#merchant-register-prompt" class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="las la-briefcase"></i> Register</button>
+                            </form>
+                        </div>
                     </div>
 
                 </nav>
@@ -71,217 +73,30 @@
         </div>
         <div id="main-banner" data-aos="fade-up">
 
-            <div class="banner-caption">
-                <h2 class="mb-3">Boosting payment systems for businesses of all kinds and sizes.</h2>
-                <p>We power secure payments for hospitals, clinics, schools, and other businesses of all sizes. Be one of them.</p>
-                <div class="embed-responsive embed-responsive-16by9 border mt-5 mb-5">
-                    <video controls poster="images/others/video-center/jazzypay-showcase-video.jpg">
-                        <source src="https://jazzypay-v2-public.s3-ap-southeast-1.amazonaws.com/site/JazzyPay+-+Showcase+Video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12">
+                        <div class="banner-caption">
+                            <div class="banner-caption-float">
+                                <h2 class="mb-3">Modern digital payments for businesses of all sizes</h2>
+                                <p>We envision a world where even the smallest businesses can grow through modern digital payment solutions.</p>
+                                <div class="mb-4"></div>
+                                <button type="button" class="btn btn-outline-dark my-2 mr-2 my-sm-0" type="submit">Sign up my Business</button>
+                                <button type="button" class="btn btn-secondary my-2 my-sm-0" type="submit">Contact Sales</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <div class="banner-screens">
+                <img src="images/banners/jp-banner-source.svg" />
             </div>
 
         </div>
     </header>
 
     <section>
-
-        <div id="sec-features">
-        </div>
-        <div class="home-partners">
-            <div class="container-fluid">
-                <div class="row justify-content-md-center">
-                    <div class="col-lg-2">
-                        <div class="partners-title">
-                            <p>Powered by our partners and investors</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-10">
-                        <ul class="slider-home-partners owl-carousel owl-theme">
-                            <li><img src="images/others/partners/slider/techstars.png" alt=""></li>
-                            <li><img src="images/others/partners/slider/rakuten.png" alt=""></li>
-                            <li><img src="images/others/partners/slider/cocoon-capital.png" alt=""></li>
-                            <li><img src="images/others/partners/slider/amazon-web-services.png" alt=""></li>
-                            <li><img src="images/others/partners/slider/sisa.png" alt=""></li>
-                            <li><img src="images/others/partners/slider/twilio.png" alt=""></li>
-                            <li><img src="images/others/partners/slider/sendgrid.png" alt=""></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="home-intro">
-            <div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-9">
-                        <div class="intro-content mb-lg-5">
-                            <h2 class="home-title">
-                                Why should I register my business to JazzyPay?
-                            </h2>
-                            <p>Here are the top reasons why you should choose JazzyPay for your business to help make your decision-making process a lot easier.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-10">
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-8 order-2 order-lg-1">
-                                <div class="feat-content">
-                                    <h3>Less fees, more growth</h3>
-                                    <p>We don’t charge a setup fee, a monthly subscription fee, or a sales quota. Charges are only made for every successful transaction so we can further help your business grow.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-4 order-1 order-lg-2">
-                                <div class="feat-content-img text-lg-right">
-                                    <img src="images/others/for-business/feat1.png" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-4">
-                                <div class="feat-content-img">
-                                    <img src="images/others/for-business/feat2.png" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-8">
-                                <div class="feat-content">
-                                    <h3>Zero integration needed</h3>
-                                    <p>Don’t have a website for your business yet? No worries, you don’t need website integration to start accepting payments online with JazzyPay!</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-8 order-2 order-lg-1">
-                                <div class="feat-content">
-                                    <h3>Send payment requests online</h3>
-                                    <p>Collect payments anytime and anywhere by sending bills and invoices to your customer via SMS or email through JazzyPay. </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-4 order-1 order-lg-2">
-                                <div class="feat-content-img text-lg-right">
-                                    <img src="images/others/for-business/feat3.png" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-4">
-                                <div class="feat-content-img">
-                                    <img src="images/others/for-business/feat4.png" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-8">
-                                <div class="feat-content">
-                                    <h3>Referral incentives</h3>
-                                    <p>We value our partnership with you, so we make sure to give back a reward if you share the word and encourage other businesses to upgrade their payment system.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-8 order-2 order-lg-1">
-                                <div class="feat-content">
-                                    <h3>Top notch security</h3>
-                                    <p>JazzyPay is a registered Operator of Payments System (OPS) by the Bango Sentral ng Pilipinas (BSP). We have also obtained the highest certification needed for digital payment systems, ensuring that you and your clients’
-                                        information are always kept safe and secure.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-4 order-1 order-lg-2">
-                                <div class="feat-content-img text-lg-right">
-                                    <img src="images/others/for-business/feat5.png" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-4">
-                                <div class="feat-content-img">
-                                    <img src="images/others/for-business/feat6.png" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-8">
-                                <div class="feat-content">
-                                    <h3>Open to innovation</h3>
-                                    <p>We’re always looking for ways to make your user experience better, so we are always open to innovation opportunities and remain receptive to your feedback. Contact us anytime for suggestions and we’ll be happy to hear
-                                        you out.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="home-steps">
-            <div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="col-lg-12">
-                        <div class="steps-content">
-                            <h2 class="home-title">
-                                How it works
-                            </h2>
-                            <!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p> -->
-
-                            <div class="steps-timeline">
-
-                                <div class="steps-one">
-                                    <img class="steps-img" src="images/others/for-business/step1.svg" alt="" />
-                                    <h3 class="steps-name">
-                                        Submit requirements
-                                    </h3>
-                                    <p class="steps-description">
-                                        Complete the form and upload all the necessary documents for business registration.
-                                    </p>
-                                </div>
-
-                                <div class="steps-two">
-                                    <img class="steps-img" src="images/others/for-business/step2.svg" alt="" />
-                                    <h3 class="steps-name">
-                                        Wait for approval
-                                    </h3>
-                                    <p class="steps-description">
-                                        Allow us to review your application, which can be approved in just 1 business day!
-                                    </p>
-                                </div>
-
-                                <div class="steps-three">
-                                    <img class="steps-img" src="images/others/for-business/step3.svg" alt="" />
-                                    <h3 class="steps-name">
-                                        Go cashless!
-                                    </h3>
-                                    <p class="steps-description">
-                                        Congratulations, you can now start accepting online payments instantly!
-                                    </p>
-                                </div>
-
-                            </div>
-
-                            <div class="timeline-video mt-5">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-8">
-                                        <p>Or watch our complete payment guide below.</p>
-                                        <div class="embed-responsive embed-responsive-16by9 border mt-2 mb-5">
-                                            <video controls poster="images/others/thumbnail.png">
-                                        <source src="https://jazzypay-v2-public.s3-ap-southeast-1.amazonaws.com/jazzypay_how_to_pay.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="home-merchants" id="sec-feedbacks">
             <div class="container">
@@ -295,14 +110,166 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <ul class="slider-home-merchants owl-carousel mt-3">
-                            <li><img src="images/others/merchants/adventist-manila.jpg" alt=""></li>
-                            <li><img src="images/others/merchants/adventist-santiago.jpg" alt=""></li>
-                            <li><img src="images/others/merchants/adventist-college.jpg" alt=""></li>
-                            <li><img src="images/others/merchants/compleat-smile.jpg" alt=""></li>
-                            <li><img src="images/others/merchants/fivestar-college.jpg" alt=""></li>
-                            <li><img src="images/others/merchants/pingoy-hospital.jpg" alt=""></li>
-                        </ul>
+                        <div class="merchant-sprite"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-intro">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-9">
+                        <div class="intro-content mb-lg-5">
+                            <h2 class="home-title">
+                                Why JazzyPay?
+                            </h2>
+                            <p>We do more for your business. Here’s how we support your growth and success.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-10">
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 order-2 order-lg-1">
+                                <div class="feat-content">
+                                    <h3>Less fees, more growth</h3>
+                                    <p>No setup fee, monthly subscription fee, or a monthly sales quota. Charges are only made for every successful transaction so you can focus on growing your business. See our pricing <a href="for-business-pricing.html">here.</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-4 order-1 order-lg-2">
+                                <div class="feat-content-img text-lg-right">
+                                    <img src="images/others/for-business/feat1.png" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-4">
+                                <div class="feat-content-img">
+                                    <img src="images/others/for-business/feat4.png" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-8">
+                                <div class="feat-content">
+                                    <h3>Send invoices online</h3>
+                                    <p>Streamline your payment collection and save time by scheduling payment requests and sending invoices individually or in bulk. Enable auto reminders to notify your clients of payment due dates.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 order-2 order-lg-1">
+                                <div class="feat-content">
+                                    <h3>Monitor payments in real time</h3>
+                                    <p>Easily track payments and payment requests in real time through your profile dashboard. </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-4 order-1 order-lg-2">
+                                <div class="feat-content-img text-lg-right">
+                                    <img src="images/others/for-business/feat3.png" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-4">
+                                <div class="feat-content-img">
+                                    <img src="images/others/for-business/feat2.png" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-8">
+                                <div class="feat-content">
+                                    <h3>Zero integration needed</h3>
+                                    <p>Don’t have a website for your business? No worries, you can accept digital payments with JazzyPay even without a website.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 order-2 order-lg-1">
+                                <div class="feat-content">
+                                    <h3>Top notch security</h3>
+                                    <p>JazzyPay is a registered Operator of Payments System by the Bangko Sentral ng Pilipinas. We comply with the highest security standards to ensure that you and your clients’ information are always secure.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-4 order-1 order-lg-2">
+                                <div class="feat-content-img text-lg-right">
+                                    <img src="images/others/for-business/feat5.png" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-play-button text-center">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-6">
+                        <h3>Play our use-case video</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <img src="images/others/play-btn-big.png" data-toggle="modal" data-target="#use-case-modal" class="video-btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-steps">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-12">
+                        <div class="steps-content">
+                            <h2 class="home-title">
+                                How it works
+                            </h2>
+
+                            <div class="steps-timeline">
+
+                                <div class="steps-one">
+                                    <img class="steps-img" src="images/others/step1.png" alt="" />
+                                    <h3 class="steps-name">
+                                        Search merchant
+                                    </h3>
+                                    <p class="steps-description">
+                                        Search for the merchant you’d like to pay via the search bar or by scanning the store’s unique QR Code.
+                                    </p>
+                                    <div class="steps-animate" data-aos="fade-up" data-aos-delay="100">
+                                        <img src="images/others/steps/step-1.gif" class="ss-step" />
+                                    </div>
+                                </div>
+
+                                <div class="steps-two">
+                                    <img class="steps-img" src="images/others/step2.png" alt="" />
+                                    <h3 class="steps-name">
+                                        Select payment method
+                                    </h3>
+                                    <p class="steps-description">
+                                        Select your preferred payment method from 27 options.
+                                    </p>
+                                    <div class="steps-animate" data-aos="fade-up" data-aos-delay="200">
+                                        <img src="images/others/steps/step-2.gif" class="ss-step" />
+                                    </div>
+                                </div>
+
+                                <div class="steps-three">
+                                    <img class="steps-img" src="images/others/step3.png" alt="" />
+                                    <h3 class="steps-name">
+                                        Submit payment
+                                    </h3>
+                                    <p class="steps-description">
+                                        Submit the payment form with your payment details then it's done!
+                                    </p>
+                                    <div class="steps-animate" data-aos="fade-up" data-aos-delay="300">
+                                        <img src="images/others/steps/step-3.gif" class="ss-step" />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -314,7 +281,7 @@
                     <div class="col-lg-12">
                         <div class="feedbacks-content text-enter">
                             <h2 class="home-title">
-                                Feedbacks
+                                Feedback
                             </h2>
                             <p>Why our merchants love what we do</p>
                         </div>
@@ -413,7 +380,8 @@
                             <h2 class="cta-title">
                                 Be a part of the digital payment revolution in the Philippines.
                             </h2>
-                            <a href="for-business.html" class="btn btn-secondary btn-lg"><i class="las la-briefcase"></i> Register my Business</a>
+                            <a href="for-business.html" class="btn btn-secondary"><i class="las la-briefcase"></i> Sign up</a>
+                            <a href="for-business-contact.html" class="btn btn-secondary"><i class="las la-phone"></i> Inquire now</a>
                         </div>
                     </div>
                 </div>
@@ -518,6 +486,64 @@
         </div>
     </footer>
 
+    <div class="modal fade yt-modal" id="use-case-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Use-case Video</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item video-embed" src="https://www.youtube.com/embed/7aoqUIpToO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="merchant-login-prompt" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Merchant Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    For merchants, you need to login first as a user to access the business area.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light">Cancel</button>
+                    <button type="button" class="btn btn-secondary">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="merchant-register-prompt" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    For merchants, you need to signup first as a user to register an account with JazzyPay.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light">Cancel</button>
+                    <button type="button" class="btn btn-secondary">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="top">
         <img src="images/misc/top.png" />
     </div>
@@ -536,6 +562,7 @@
     <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
 
     <script src="js/partner-slider.js"></script>
+    <script src="js/youtube-on-modal.js"></script>
     <script src="js/script.js"></script>
     <script src="js/navbar.js"></script>
 

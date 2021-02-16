@@ -428,6 +428,10 @@ textarea {
     }
 }
 
+.navbar-toggler {
+    transform: scale(0.8);
+}
+
 #main-banner {
     min-height: 68vh;
     background: url('../images/banners/banner-graphic.svg') no-repeat bottom center;
@@ -691,7 +695,7 @@ footer {
     background: #241e5c;
     background: linear-gradient(90deg, rgba(36, 30, 92, 1) 0%, rgba(81, 50, 149, 1) 100%);
     .footer-bar {
-        padding: 5rem 1rem;
+        padding: 4rem 1rem 3.5rem 1rem;
         @include for-desktop-md {
             padding: 4rem 1rem;
         }
@@ -764,7 +768,8 @@ footer {
     // copyright bar
     .copyright-bar {
         border-top: solid 1px rgba($color: #fff, $alpha: 0.1);
-        padding: 3rem 0;
+        padding: 1.75rem 0 1.5rem 0;
+        min-height: 95px;
         @include for-tablet {
             padding: 3rem 1rem;
         }
@@ -840,13 +845,13 @@ footer {
     @include for-phone {
         padding: 2rem 1rem;
     }
-    ul {
-        // margin: 0;
-        // padding: 0;
-        // // &:first-of-type {
-        // //     list-style: none;
-        // // }
-    }
+    //ul {
+    // margin: 0;
+    // padding: 0;
+    // // &:first-of-type {
+    // //     list-style: none;
+    // // }
+    //}
     ol {
         margin-bottom: 1.5rem;
         li {
@@ -896,6 +901,32 @@ footer {
         @include for-tablet {
             height: 40px;
         }
+    }
+}
+
+// video center
+.team-center-header {
+    padding: 5rem 0;
+    background: #ECEBF5;
+    text-align: center;
+    img {
+        margin-bottom: 2rem;
+    }
+    h2 {
+        font-weight: 700;
+        color: $primary-color;
+        @include for-phone {
+            font-size: 1.75rem;
+        }
+    }
+    p {
+        font-size: 1rem;
+        @include for-phone {
+            font-size: 1rem;
+        }
+    }
+    @include for-tablet {
+        padding: 5rem 2rem;
     }
 }
 
@@ -2574,34 +2605,30 @@ button[aria-expanded='false']>.faq-icon {
 
 // Partners Slider
 .home-partners {
-    background: #fafafa;
-    padding: 2rem 3rem;
+    background: #fff;
+    padding: 2rem;
+    border-bottom: solid 1px #f0f0f0;
     @include for-desktop-md {
         padding: 1.5rem 1rem;
     }
 }
 
-.slider-home-payments {
-    margin: 0;
-    padding: 0;
-    height: 40px;
-    text-align: center;
-    margin: 0 auto;
-    li {
-        list-style: none;
-        vertical-align: middle;
-        text-align: center;
-        margin: 0 1.5rem;
-        img {
-            width: auto !important;
-            height: 35px;
-        }
+// sprite
+@keyframes logo-sprite-animation {
+    from {
+        background-position: 0px 0;
     }
-    .owl-item {
-        img {
-            margin: 0 auto;
-        }
+    to {
+        background-position: -4050px 0;
     }
+}
+
+.logo-sprite {
+    height: 50px;
+    width: 100%;
+    background-image: url('../images/others/logo-sprite.jpg');
+    background-repeat: repeat-x;
+    animation: logo-sprite-animation 30s linear infinite;
 }
 
 .slider-home-partners {
@@ -2973,6 +3000,10 @@ button[aria-expanded='false']>.faq-icon {
     .ss-step {
         position: relative;
         z-index: 9;
+        width: 300px;
+        @include for-tablet {
+            width: 175px;
+        }
     }
     .steps-hover {
         position: absolute;
@@ -2992,7 +3023,7 @@ button[aria-expanded='false']>.faq-icon {
 
 .steps-description {
     margin: 1rem 0;
-    height: 72px;
+    height: 100px;
     color: #333;
     @include for-tablet-landscape {
         height: 108px;
@@ -3015,7 +3046,7 @@ button[aria-expanded='false']>.faq-icon {
     margin-top: 1rem;
     @extend .section-header;
     @include for-tablet {
-        font-size: 1rem;
+        font-size: 0.9rem;
         height: 40px;
     }
     @include for-tablet-landscape {
@@ -3053,8 +3084,19 @@ button[aria-expanded='false']>.faq-icon {
     }
 }
 
+.nav-cta {
+    @include for-tablet {
+        display: none;
+    }
+}
+
 .nav-cta-resp {
     padding: 0 1rem;
+    .nav-cta {
+        @include for-tablet {
+            display: block !important;
+        }
+    }
 }
 
 .security-logos {
@@ -3195,5 +3237,103 @@ button[aria-expanded='false']>.faq-icon {
         @include for-phone {
             font-size: 0.8rem !important;
         }
+    }
+}
+
+.booking-header {
+    @include for-phone {
+        text-align: center;
+    }
+}
+
+.select2-container {
+    width: 100%;
+}
+
+.merchant-agreement-content {
+    p {
+        font-size: 0.9rem !important;
+    }
+    li {
+        font-size: 0.9rem !important;
+    }
+    .table {
+        font-weight: normal;
+        margin-bottom: 2rem;
+        tr,
+        td {
+            font-size: 0.9rem !important;
+        }
+    }
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    .tg td {
+        word-break: normal;
+    }
+    .tg th {
+        word-break: normal;
+    }
+    .tg .tg-0lax {
+        text-align: left;
+        vertical-align: top;
+    }
+    .tg .tg-nrix {
+        text-align: center;
+        vertical-align: middle
+    }
+    ol {
+        margin-top: 1rem;
+    }
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.tutvid-thumb {
+    position: relative;
+    img {
+        filter: brightness(80%);
+    }
+    .tutvid-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &:hover {
+            cursor: pointer;
+        }
+        img {
+            opacity: 1;
+            filter: brightness(100%);
+        }
+    }
+    .tutvid-btn {
+        width: 70px;
+    }
+}
+
+.landing-page-content {
+    ol {
+        margin-top: 1rem;
+        li {
+            font-weight: normal !important;
+        }
+    }
+}
+
+.auto-reminder-table {
+    margin-bottom: 1.25rem;
+    table {
+        width: 100% !important;
+    }
+    td {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    @include for-phone {
+        white-space: nowrap;
     }
 }
