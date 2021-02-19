@@ -3084,18 +3084,17 @@ button[aria-expanded='false']>.faq-icon {
     }
 }
 
+// .nav-cta {
+//     @include for-tablet {
+//         display: none;
+//     }
+// }
 .nav-cta {
     @include for-tablet {
-        display: none;
+        padding: 0 1rem;
     }
-}
-
-.nav-cta-resp {
-    padding: 0 1rem;
-    .nav-cta {
-        @include for-tablet {
-            display: block !important;
-        }
+    @include for-tablet-landscape {
+        padding: 0 1rem;
     }
 }
 

@@ -3702,17 +3702,13 @@ button[aria-expanded='false'] > .faq-icon {
 
 @media (max-width: 768px) {
   .nav-cta {
-    display: none;
+    padding: 0 1rem;
   }
 }
 
-.nav-cta-resp {
-  padding: 0 1rem;
-}
-
-@media (max-width: 768px) {
-  .nav-cta-resp .nav-cta {
-    display: block !important;
+@media (max-width: 1024px) and (orientation: landscape) {
+  .nav-cta {
+    padding: 0 1rem;
   }
 }
 
