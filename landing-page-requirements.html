@@ -39,12 +39,13 @@
                                 <li class="nav-item"><a href="#" class="nav-link">How To Pay</a></li>
                                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                             </ul>
-                            <div class="nav-cta-resp"></div>
+                            <div class="nav-cta">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <a href="user-my-profile.html" class="btn btn-outline-light my-2 mr-2 my-sm-0"><i class="las la-lock"></i> Sign In</a>
+                                    <a href="for-business.html" class="btn btn-light my-2 my-sm-0"><i class="las la-briefcase"></i> JazzyPay for Business</a>
+                                </form>
+                            </div>
                         </div>
-                        <form class="form-inline nav-cta my-2 my-lg-0">
-                            <a href="user-my-profile.html" class="btn btn-outline-light my-2 mr-2 my-sm-0"><i class="las la-lock"></i> Sign In</a>
-                            <a href="for-business.html" class="btn btn-light my-2 my-sm-0"><i class="las la-briefcase"></i> JazzyPay for Business</a>
-                        </form>
                     </div>
 
                 </nav>
@@ -61,58 +62,100 @@
                             <h2 class="about-big-text text-center py-3">Legal Requirements</h2>
                         </div>
 
+                        <hr>
+
                         <div class="landing-page-content mt-3">
-                            <h4><strong>Sole Proprietorship</strong></h4>
 
-                            <ol type="1">
-                                <li>DTI Certificate of Business Registration</li>
-                                <li>Business Permit</li>
-                                <li>BIR 2303 Certificate of TAX Registration</li>
-                                <li>Two government ID of the proprietor</li>
-                                <li>Proof of billing address</li>
-                                <li>Signed Service Agreement</li>
-                            </ol>
+                            <div class="text-center">
+                                <div class="form-group mb-0">
+                                    <label><strong>Please select business type first:</strong></label>
+                                </div>
 
-                            <small><em>NOTE: We may also request additional requirements, certificates, or licenses depending on the type and nature of your business.</em></small>
-
-                            <hr>
-
-                            <h4><strong>Partnership</strong></h4>
-
-                            <ol type="1">
-                                <li>SEC Certificate of Partnership Registration</li>
-                                <li>Article of Partnership (AOP)</li>
-                                <li>Business Permit</li>
-                                <li>BIR 2303 Certificate of TAX Registration</li>
-                                <li>Secretary Certificate (Authorized Signatory)</li>
-                                <li>Two government IDs of each partner</li>
-                                <li>Signed Service Agreement</li>
-                            </ol>
-
-                            <small><em>NOTE: We may also request additional requirements, certificates, or licenses depending on the type and nature of your business.</em></small>
-
-                            <hr>
-
-                            <h4><strong>Corporation</strong></h4>
-
-                            <ol type="1">
-                                <li>SEC Certificate of Corporate Registration</li>
-                                <li>Article of Incorporation (AOI)</li>
-                                <li>General Information Sheet (GIS)</li>
-                                <li>Business Permit</li>
-                                <li>BIR 2303 Certificate of TAX Registration</li>
-                                <li>Audited Financial Statement (AFS)</li>
-                                <li>Secretary Certificate (Authorized Signatory)</li>
-                                <li>Two government IDs of each Authorized Signatory</li>
-                                <li>Two government IDs of the Corporate Secretary</li>
-                                <li>Signed Service Agreement</li>
-                            </ol>
-
-                            <small><em>NOTE: We may also request additional requirements, certificates, or licenses depending on the type and nature of your business.</em></small>
-
-                            <div class="text-center mt-5">
-                                <a href="#" class="btn btn-secondary btn-icon"><i class="las la-receipt mr-3"></i> Sign up</a>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="select-business" id="radio-sole" value="option1" checked>
+                                    <label class="form-check-label" for="radio-sole">Sole Proprietorship</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="select-business" id="radio-part" value="option2">
+                                    <label class="form-check-label" for="radio-part">Partnership</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="select-business" id="radio-corp" value="option3">
+                                    <label class="form-check-label" for="radio-corp">Corporation</label>
+                                </div>
                             </div>
+
+                            <div class="card legreq-sole mt-3">
+                                <div class="card-header">
+                                    <strong>Legal Requirements for Sole Proprietorship</strong>
+                                </div>
+                                <div class="card-body">
+                                    <ol type="1">
+                                        <li>DTI Certificate of Business Registration</li>
+                                        <li>Business Permit</li>
+                                        <li>BIR 2303 Certificate of TAX Registration</li>
+                                        <li>Two government ID of the proprietor</li>
+                                        <li>Proof of billing address</li>
+                                        <li>Signed Service Agreement</li>
+                                    </ol>
+
+                                    <small><em>NOTE: We may also request additional requirements, certificates, or licenses depending on the type and nature of your business.</em></small>
+
+                                    <div class="text-center mt-3">
+                                        <a href="#" class="btn btn-secondary btn-icon"><i class="las la-receipt mr-3"></i> Sign up</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card legreq-part mt-3">
+                                <div class="card-header">
+                                    <strong>Legal Requirements for Partnership</strong>
+                                </div>
+                                <div class="card-body">
+                                    <ol type="1">
+                                        <li>SEC Certificate of Partnership Registration</li>
+                                        <li>Article of Partnership (AOP)</li>
+                                        <li>Business Permit</li>
+                                        <li>BIR 2303 Certificate of TAX Registration</li>
+                                        <li>Secretary Certificate (Authorized Signatory)</li>
+                                        <li>Two government IDs of each partner</li>
+                                        <li>Signed Service Agreement</li>
+                                    </ol>
+
+                                    <small><em>NOTE: We may also request additional requirements, certificates, or licenses depending on the type and nature of your business.</em></small>
+
+                                    <div class="text-center mt-3">
+                                        <a href="#" class="btn btn-secondary btn-icon"><i class="las la-receipt mr-3"></i> Sign up</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card legreq-corp mt-3">
+                                <div class="card-header">
+                                    <strong>Legal Requirements for Corporation</strong>
+                                </div>
+                                <div class="card-body">
+                                    <ol type="1">
+                                        <li>SEC Certificate of Corporate Registration</li>
+                                        <li>Article of Incorporation (AOI)</li>
+                                        <li>General Information Sheet (GIS)</li>
+                                        <li>Business Permit</li>
+                                        <li>BIR 2303 Certificate of TAX Registration</li>
+                                        <li>Audited Financial Statement (AFS)</li>
+                                        <li>Secretary Certificate (Authorized Signatory)</li>
+                                        <li>Two government IDs of each Authorized Signatory</li>
+                                        <li>Two government IDs of the Corporate Secretary</li>
+                                        <li>Signed Service Agreement</li>
+                                    </ol>
+
+                                    <small><em>NOTE: We may also request additional requirements, certificates, or licenses depending on the type and nature of your business.</em></small>
+
+                                    <div class="text-center mt-3">
+                                        <a href="#" class="btn btn-secondary btn-icon"><i class="las la-receipt mr-3"></i> Sign up</a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -235,9 +278,8 @@
     <script src="js/popper.min.js"></script>
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
 
-    <script src="js/navbar.js"></script>
-    <script src="js/youtube-on-modal.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/select-legal-req.js"></script>
 
 </body>
 

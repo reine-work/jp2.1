@@ -2133,6 +2133,12 @@ ul.social-icons {
     margin-top: 80px;
 }
 
+#blog-featured {
+    @include for-tablet {
+        display: none;
+    }
+}
+
 .blog-header {
     position: relative;
     max-height: 400px;
@@ -3315,7 +3321,9 @@ button[aria-expanded='false']>.faq-icon {
         }
     }
     .tutvid-btn {
-        width: 70px;
+        @include for-tablet {
+            width: 60px;
+        }
     }
 }
 
@@ -3324,7 +3332,15 @@ button[aria-expanded='false']>.faq-icon {
         margin-top: 1rem;
         li {
             font-weight: normal !important;
+            font-size: 1.1rem;
         }
+    }
+    p,
+    label {
+        font-size: 1.1rem;
+    }
+    small {
+        font-size: 0.9rem;
     }
 }
 
@@ -3339,5 +3355,113 @@ button[aria-expanded='false']>.faq-icon {
     }
     @include for-phone {
         white-space: nowrap;
+    }
+}
+
+.legreq-part {
+    display: none;
+}
+
+.legreq-corp {
+    display: none;
+}
+
+.api-doc-sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    ul {
+        padding-left: 0;
+        li {
+            list-style-type: none;
+            ul {
+                padding-left: 1.5rem;
+            }
+            a {
+                font-size: 0.95rem;
+                color: #333;
+                &:active {
+                    color: $accent-color;
+                    border-left: solid 2px $accent-color;
+                    padding-left: 0.5rem;
+                }
+                .active {
+                    color: $accent-color;
+                    border-left: solid 2px $accent-color;
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.api-doc-sidebar a.active {
+    color: $accent-color;
+    border-left: solid 2px $accent-color;
+    padding-left: 0.5rem;
+}
+
+.p5rem {
+    padding-top: 5rem;
+}
+
+.about-banner {
+    margin-top: 80px;
+    background: url('../images/banners/about-bg-wave.svg') top center no-repeat;
+    background-size: 101% auto;
+    height: 600px;
+    h2 {
+        font-weight: bold;
+        color: $white;
+        font-size: 2.75rem;
+        width: 75%;
+        margin-top: 8rem;
+        @include for-tablet {
+            font-size: 2rem;
+            margin-top: 7rem;
+            width: 60%;
+            padding: 0 1rem;
+            color: $accent-color;
+        }
+        @include for-phone {
+            font-size: 1.75rem;
+            margin-top: 3rem;
+            width: 100%;
+            padding: 0 1rem;
+            text-align: center;
+        }
+    }
+    .about-banner-caption {
+        position: relative;
+    }
+    .about-banner-graphic {
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        @include for-tablet {
+            padding: 0 2rem;
+        }
+        @include for-phone {
+            top: 13rem;
+        }
+        .about-banner-graphic-des {
+            @include for-phone {
+                display: none;
+            }
+        }
+        .about-banner-graphic-mob {
+            display: none;
+            @include for-phone {
+                display: block;
+            }
+        }
+    }
+    @include for-tablet {
+        height: 400px;
+        background: none;
+    }
+    @include for-phone {
+        min-height: 600px;
+        background-size: cover;
     }
 }

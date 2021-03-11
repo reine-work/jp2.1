@@ -271,10 +271,7 @@ body.sidebar-gone .main-sidebar {
 .quick-access {
     position: relative;
     @include for-big-desktop-up {
-        margin-top: 9rem;
-    }
-    @include for-phone {
-        min-height: 600px;
+        margin-top: 2rem;
     }
 }
 
@@ -289,6 +286,52 @@ body.sidebar-gone .main-sidebar {
         margin-right: 2px;
         @include for-phone {
             display: block;
+        }
+    }
+}
+
+.quick-buttons {
+    a {
+        background: #fff;
+        border: none;
+        display: block;
+        text-align: left;
+        height: 60px;
+        text-decoration: none;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.05);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.05);
+        box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.05);
+        &:hover {
+            background: #fcfcfd !important;
+            text-decoration: none;
+            color: #333;
+        }
+        &:focus {
+            color: #333;
+            background: #fcfcfd !important;
+        }
+        @include for-tablet {
+            margin: 1rem 0;
+        }
+        span.qb-icon {
+            vertical-align: middle;
+            background: #7dc242;
+            height: 40px;
+            width: 40px;
+            border-radius: 0.25rem;
+            text-align: center;
+            display: inline-block;
+            padding: 7px;
+            margin-top: 2px;
+            i {
+                font-size: 25px;
+                color: #fff;
+            }
+        }
+        span.qb-name {
+            padding-left: 10px;
+            position: relative;
+            top: 3px;
         }
     }
 }
@@ -575,12 +618,14 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu>li.active>a:before {
 }
 
 .video-item {
-    margin: 2rem 0 0 0;
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.05);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.05);
+    box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.05);
+    overflow: hidden;
     a {
-        font-size: 1.2rem;
-        font-weight: 700;
-        padding-top: 1rem;
-        display: block;
         &:hover {
             color: $primary-color;
             opacity: 0.75;
@@ -592,6 +637,24 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu>li.active>a:before {
     &:hover {
         .video-container {
             display: block;
+        }
+    }
+    .video-item-title {
+        padding: 1rem;
+        img {
+            width: 35px;
+            margin: 0 0.5rem 0 0;
+            padding: 0;
+            float: left;
+        }
+        p {
+            margin: 0;
+            padding: 0;
+            line-height: 1.25;
+            color: #333;
+            height: 36px;
+            display: table-cell;
+            vertical-align: middle;
         }
     }
 }
@@ -622,133 +685,6 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu>li.active>a:before {
 }
 
 // dashboard videos
-.dashboard-overlay {
-    position: fixed;
-    z-index: 800;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.75);
-    display: none;
-}
-
-.dashboard-video {
-    position: fixed;
-    bottom: 25px;
-    right: 20px;
-    max-width: 60%;
-    min-width: 500px;
-    text-align: right;
-    z-index: 800;
-    @include for-tablet {
-        min-width: 95%;
-    }
-    @include for-phone {
-        min-width: 89%;
-    }
-    .dashboard-video-label {
-        background: #362e8b;
-        display: none;
-        padding: 8px 20px;
-        border-radius: 0.25rem;
-        p {
-            margin: 0;
-            padding: 0;
-            color: #fff;
-            font-size: 0.8rem;
-            font-weight: 700;
-            i.play-icon {
-                font-size: 20px;
-                margin-right: 4px;
-                position: relative;
-                top: 2px;
-            }
-            i.caret-toggle {
-                font-size: 12px;
-                margin-left: 10px;
-                -moz-transition: transform 0.5s;
-                -webkit-transition: transform 0.5s;
-                transition: transform 0.5s;
-            }
-        }
-        @include for-phone {
-            display: inline-block;
-        }
-    }
-    ul.suggested-videos {
-        margin: 1rem 0 0 0;
-        background: #fff;
-        border-radius: 0.35rem;
-        border: solid 1px #eee;
-        text-align: left;
-        li {
-            display: inline-block;
-            padding: 20px 20px;
-            width: 100%;
-            max-width: 200px;
-            vertical-align: top;
-            height: 200px;
-            img {
-                border: solid 1px #f0f0f0;
-                margin-bottom: 5px;
-                vertical-align: top;
-                @include for-phone {
-                    margin-bottom: 10px;
-                    margin: 0 auto;
-                    width: 100%;
-                }
-            }
-            &:last-child {
-                border: none;
-            }
-            &:hover {
-                background: #eee;
-            }
-            h5 {
-                font-size: 0.85rem;
-                line-height: 1.25;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                /* number of lines to show */
-                -webkit-box-orient: vertical;
-            }
-            a {
-                font-size: 0.7rem;
-                font-weight: 700;
-                color: #7dc242;
-                cursor: pointer;
-            }
-            @include for-tablet {
-                height: 220px;
-                width: 100%;
-                max-width: 33%;
-            }
-            @include for-phone {
-                height: 250px;
-                width: 100%;
-                max-width: 100%;
-            }
-        }
-        .media-body {
-            display: block;
-            padding-top: 5px;
-            @include for-phone {
-                margin-bottom: 10px;
-                margin: 0 auto;
-                width: auto;
-            }
-        }
-        @include for-phone {
-            max-height: 350px;
-            overflow-y: scroll;
-            display: none;
-        }
-    }
-}
-
 .icon-flip {
     transform: rotate(-180deg);
 }
@@ -1191,4 +1127,9 @@ input:checked+.slider:before {
 
 .custom-switch .custom-control-input:disabled:checked~.custom-control-label::before {
     background-color: rgba(0, 123, 255, 0.5);
+}
+
+.about-banner {
+    position: relative;
+    top: -2px;
 }
