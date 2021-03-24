@@ -14,7 +14,7 @@ var video = document.getElementById('video');
 
 // trigger
 document.getElementById("snap").addEventListener("click", function() {
-    // context.drawImage(video, 0, 0, 100%, 100%);
+    context.drawImage(video, 0, 0, 360, 640);
     video.scale(1, 11);
 });
 
