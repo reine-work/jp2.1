@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 // media quaries
 @mixin for-phone-landscape {
     @media (max-width: 767px) and (orientation: landscape) {
@@ -1361,6 +1362,15 @@ ul.social-icons {
     }
     span.payment-option-name {
         font-weight: 400;
+    }
+    .opt.unavailable {
+        opacity: 0.5;
+        img {
+            filter: grayscale(100%);
+        }
+        .custom-control-input:disabled~.custom-control-label {
+            color: #999;
+        }
     }
 }
 
@@ -3463,5 +3473,27 @@ button[aria-expanded='false']>.faq-icon {
     @include for-phone {
         min-height: 600px;
         background-size: cover;
+    }
+}
+
+#video {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 100% !important;
+}
+
+#canvas {
+    width: 100% !important;
+}
+
+.selfie-camera-content {
+    position: relative;
+    width: 100%;
+    #snap {
+        position: absolute;
+        bottom: 20px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
     }
 }

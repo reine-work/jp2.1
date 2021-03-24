@@ -44,12 +44,13 @@
                                 <li class="nav-item"><a href="#" class="nav-link">How To Pay</a></li>
                                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                             </ul>
-                            <div class="nav-cta-resp"></div>
+                            <div class="nav-cta">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <a href="user-my-profile.html" class="btn btn-outline-light my-2 mr-2 my-sm-0"><i class="las la-lock"></i> Sign In</a>
+                                    <a href="for-business.html" class="btn btn-light my-2 my-sm-0"><i class="las la-briefcase"></i> JazzyPay for Business</a>
+                                </form>
+                            </div>
                         </div>
-                        <form class="form-inline nav-cta my-2 my-lg-0">
-                            <a href="user-my-profile.html" class="btn btn-outline-light my-2 mr-2 my-sm-0"><i class="las la-lock"></i> Sign In</a>
-                            <a href="for-business.html" class="btn btn-light my-2 my-sm-0"><i class="las la-briefcase"></i> JazzyPay for Business</a>
-                        </form>
                     </div>
 
                 </nav>
@@ -99,6 +100,12 @@
                                                     <span id="error-msg" class="hide"><i class="las la-times-circle"></i> Invalid</span>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label class="d-block">Add Selfie</label>
+                                            <button type="button" class="btn btn-light btn-block btn-icon border" data-toggle="modal" data-target="#selfie-camera"><i class="las la-camera"></i> Open Camera</button>
+
+                                            <canvas id="canvas" width="640" height="480" class="mt-3"></canvas>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Amount <span class="required-ast">*</span></label>
@@ -421,6 +428,25 @@
         </div>
     </section>
 
+    <div class="modal fade" id="selfie-camera" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Selfie Camera</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <div class="selfie-camera-content">
+                        <video id="video" width="100%" height="auto" autoplay></video>
+                        <button class="btn btn-secondary" id="snap" data-dismiss="modal"><i class="las la-camera"></i> Capture</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-bar">
             <div class="container">
@@ -533,6 +559,7 @@
     <script src="js/merchant-registration.js"></script>
     <script src="js/input-number.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/selfie-camera.js"></script>
     <script src="js/script.js"></script>
 
 </body>

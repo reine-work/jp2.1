@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -1576,6 +1577,19 @@ ul.social-icons li img {
 
 .op-single span.payment-option-name {
   font-weight: 400;
+}
+
+.op-single .opt.unavailable {
+  opacity: 0.5;
+}
+
+.op-single .opt.unavailable img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.op-single .opt.unavailable .custom-control-input:disabled ~ .custom-control-label {
+  color: #999;
 }
 
 .op-multiple {
@@ -4143,5 +4157,28 @@ button[aria-expanded='false'] > .faq-icon {
     min-height: 600px;
     background-size: cover;
   }
+}
+
+#video {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 100% !important;
+}
+
+#canvas {
+  width: 100% !important;
+}
+
+.selfie-camera-content {
+  position: relative;
+  width: 100%;
+}
+
+.selfie-camera-content #snap {
+  position: absolute;
+  bottom: 20px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */
