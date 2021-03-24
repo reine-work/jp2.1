@@ -4167,7 +4167,7 @@ button[aria-expanded='false'] > .faq-icon {
 
 #canvas {
   width: 100% !important;
-  height: auto !important;
+  height: 450px !important;
 }
 
 .selfie-camera-content {
