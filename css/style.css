@@ -4173,7 +4173,7 @@ button[aria-expanded='false'] > .faq-icon {
   #captured-selfie {
     text-align: center;
     margin: 0 auto;
-    width: 360px !important;
+    width: 100vw !important;
     height: 640px !important;
   }
 }
