@@ -1,27 +1,27 @@
-var video = document.getElementById('selfie-camera');
+// var video = document.getElementById('selfie-camera');
 
-if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-        video.srcObject = stream;
-        video.play();
-    });
-}
+// if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+//     navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+//         video.srcObject = stream;
+//         video.play();
+//     });
+// }
 
-// capture image
-var canvas = document.getElementById('captured-selfie');
-var context = canvas.getContext('2d');
-var video = document.getElementById('selfie-camera');
+// // capture image
+// var canvas = document.getElementById('captured-selfie');
+// var context = canvas.getContext('2d');
+// var video = document.getElementById('selfie-camera');
 
-// trigger
-document.getElementById("capture-btn").addEventListener("click", function() {
-    context.drawImage(video, 0, 0, 640, 480);
-    video.scale(1, 11);
-});
+// // trigger
+// document.getElementById("capture-btn").addEventListener("click", function() {
+//     context.drawImage(video, 0, 0, 640, 480);
+//     video.scale(1, 11);
+// });
 
-video.addEventListener('loadedmetadata', function() {
-    context.translate(video.videoWidth, 0);
-    context.scale(-1, 1);
-});
+// video.addEventListener('loadedmetadata', function() {
+//     context.translate(video.videoWidth, 0);
+//     context.scale(-1, 1);
+// });
 
 // NEW CODE
 
@@ -64,90 +64,79 @@ video.addEventListener('loadedmetadata', function() {
 // NEW CODE
 
 // The buttons to start & stop stream and to capture the image
-// var btnStart = document.getElementById("btn-start");
-// var btnStop = document.getElementById("btn-stop");
-// var btnCapture = document.getElementById("btn-capture");
+var btnStart = document.getElementById("btn-start");
+var btnStop = document.getElementById("btn-stop");
+var btnCapture = document.getElementById("btn-capture");
 
-// // The stream & capture
-// var stream = document.getElementById("stream");
-// var capture = document.getElementById("capture");
-// var snapshot = document.getElementById("snapshot");
+// The stream & capture
+var stream = document.getElementById("stream");
+var capture = document.getElementById("capture");
+var snapshot = document.getElementById("snapshot");
 
-// // The video stream
-// var cameraStream = null;
+// The video stream
+var cameraStream = null;
 
-// // Attach listeners
-// btnStart.addEventListener("click", startStreaming);
-// btnStop.addEventListener("click", stopStreaming);
-// btnCapture.addEventListener("click", captureSnapshot);
+// Attach listeners
+btnStart.addEventListener("click", startStreaming);
+btnStop.addEventListener("click", stopStreaming);
+btnCapture.addEventListener("click", captureSnapshot);
 
-// // Start Streaming
-// function startStreaming() {
+// Start Streaming
+function startStreaming() {
 
-//     var mediaSupport = 'mediaDevices' in navigator;
+    var mediaSupport = 'mediaDevices' in navigator;
 
-//     if (mediaSupport && null == cameraStream) {
+    if (mediaSupport && null == cameraStream) {
 
-//         navigator.mediaDevices.getUserMedia({ video: true })
-//             .then(function(mediaStream) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(mediaStream) {
 
-//                 cameraStream = mediaStream;
+                cameraStream = mediaStream;
 
-//                 stream.srcObject = mediaStream;
+                stream.srcObject = mediaStream;
 
-//                 stream.play();
-//             })
-//             .catch(function(err) {
+                stream.play();
+            })
+            .catch(function(err) {
 
-//                 console.log("Unable to access camera: " + err);
-//             });
-//     } else {
+                console.log("Unable to access camera: " + err);
+            });
+    } else {
 
-//         alert('Your browser does not support media devices.');
+        alert('Your browser does not support media devices.');
 
-//         return;
-//     }
-// }
+        return;
+    }
+}
 
-// // Stop Streaming
-// function stopStreaming() {
+// Stop Streaming
+function stopStreaming() {
 
-//     if (null != cameraStream) {
-//         var track = cameraStream.getTracks()[0];
+    if (null != cameraStream) {
 
-//         track.stop();
-//         stream.load();
+        var track = cameraStream.getTracks()[0];
 
-//         cameraStream = null;
-//     }
-// }
+        track.stop();
+        stream.load();
 
-// function captureSnapshot() {
+        cameraStream = null;
+    }
+}
 
-//     if (null != cameraStream) {
+function captureSnapshot() {
 
-//         var ctx = capture.getContext('2d');
-//         var img = new Image();
+    if (null != cameraStream) {
 
-//         ctx.drawImage(stream, 0, 0, capture.width, capture.height);
-//         ctx.translate(video.videoWidth, 0);
-//         ctx.scale(-1, 1);
+        var ctx = capture.getContext('2d');
+        var img = new Image();
 
-//         img.src = capture.toDataURL("image/png");
-//         img.width = '100%';
+        ctx.drawImage(stream, 0, 0, capture.width, capture.height);
 
-//         ctx.translate(video.videoWidth, 0);
-//         ctx.scale(-1, 1);
-//     }
-// }
+        img.src = capture.toDataURL("image/png");
+        img.width = 500;
 
-// $('#selfie-camera-modal').on('hide.bs.modal', function(event) {
-//     if (null != cameraStream) {
-//         var track = cameraStream.getTracks()[0];
+        snapshot.innerHTML = '';
 
-//         track.stop();
-//         stream.load();
-
-//         cameraStream = null;
-//     }
-// })
+        snapshot.appendChild(img);
+    }
+}

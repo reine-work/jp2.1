@@ -103,13 +103,20 @@
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label class="d-block">Add Selfie</label>
-                                            <button type="button" class="btn btn-light btn-block btn-icon border" data-toggle="modal" data-target="#selfie-camera-modal"><i class="las la-camera"></i> Open Camera</button>
+                                            <div class="button-group">
+                                                <button id="btn-start" type="button" class="button" data-toggle="modal" data-target="#selfie-camera-modal">Start Streaming</button>
+                                                <button id="btn-stop" type="button" class="button">Stop Streaming</button>
+                                            </div>
 
                                             <!-- <canvas id="captured-selfie" class="mt-3" width="640" height="480"></canvas> -->
                                         </div>
                                         <div class="form-group col-md-12">
                                             <!-- Camera output -->
-                                            <img src="//:0" alt="" id="camera--output">
+                                            <div class="play-area-sub">
+                                                <h3>The Capture</h3>
+                                                <canvas id="capture" width="320" height="240" class="d-none"></canvas>
+                                                <div id="snapshot"></div>
+                                            </div>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Amount <span class="required-ast">*</span></label>
@@ -447,20 +454,14 @@
                         <button class="btn btn-secondary" id="capture-btn" data-dismiss="modal"><i class="las la-camera"></i> Capture</button>
                     </div> -->
 
-                    <main id="camera">
-
-                        <!-- Camera sensor -->
-                        <canvas id="camera--sensor"></canvas>
-
-                        <!-- Camera view -->
-                        <video id="camera--view" autoplay playsinline></video>
-
-
-
-                        <!-- Camera trigger -->
-                        <button id="camera--trigger">Take a picture</button>
-
-                    </main>
+                    <!-- Video Element & Canvas -->
+                    <div class="play-area">
+                        <div class="play-area-sub">
+                            <h3>The Stream</h3>
+                            <video id="stream" width="320" height="240"></video>
+                            <button id="btn-capture" type="button" class="button">Capture Image</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
