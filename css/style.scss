@@ -3482,13 +3482,18 @@ button[aria-expanded='false']>.faq-icon {
     width: 100% !important;
 }
 
-#captured-selfie {
-    width: 100% !important;
-    @include for-phone {
-        text-align: center;
-        margin: 0 auto;
-        width: 100vw !important;
-        height: 640px !important;
+.canvas-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    #captured-selfie {
+        width: 100% !important;
+        @include for-phone {
+            text-align: center;
+            margin: 0 auto;
+            width: 100vw !important;
+            height: 640px !important;
+        }
     }
 }
 

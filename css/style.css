@@ -4165,12 +4165,18 @@ button[aria-expanded='false'] > .faq-icon {
   width: 100% !important;
 }
 
-#captured-selfie {
+.canvas-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.canvas-container #captured-selfie {
   width: 100% !important;
 }
 
 @media (max-width: 767px) {
-  #captured-selfie {
+  .canvas-container #captured-selfie {
     text-align: center;
     margin: 0 auto;
     width: 100vw !important;
