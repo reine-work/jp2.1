@@ -3484,8 +3484,11 @@ button[aria-expanded='false']>.faq-icon {
 
 #captured-selfie {
     width: 100% !important;
-    @include for-tablet {
-        width: 100% !important;
+    @include for-phone {
+        text-align: center;
+        margin: 0 auto;
+        width: 360px !important;
+        height: 640px !important;
     }
 }
 
