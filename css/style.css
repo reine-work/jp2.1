@@ -4180,7 +4180,7 @@ button[aria-expanded='false'] > .faq-icon {
     text-align: center;
     margin: 0 auto;
     width: 100vw !important;
-    height: 640px !important;
+    height: 100% !important;
   }
 }
 
@@ -4199,6 +4199,6 @@ button[aria-expanded='false'] > .faq-icon {
 
 #snapshot img {
   width: 100% !important;
-  width: auto !important;
+  height: auto !important;
 }
 /*# sourceMappingURL=style.css.map */
