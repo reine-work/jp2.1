@@ -4199,5 +4199,6 @@ button[aria-expanded='false'] > .faq-icon {
 
 #snapshot img {
   width: 100% !important;
+  width: auto !important;
 }
 /*# sourceMappingURL=style.css.map */
