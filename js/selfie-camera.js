@@ -15,7 +15,6 @@ var video = document.getElementById('selfie-camera');
 // trigger
 document.getElementById("capture-btn").addEventListener("click", function() {
     context.drawImage(video, 0, 0, 640, 480);
-    video.scale(1, 11);
 });
 
 video.addEventListener('loadedmetadata', function() {

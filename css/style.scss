@@ -3488,11 +3488,12 @@ button[aria-expanded='false']>.faq-icon {
     position: relative;
     #captured-selfie {
         width: 100% !important;
+        height: auto !important;
         @include for-phone {
             text-align: center;
             margin: 0 auto;
-            width: 100vw !important;
-            height: 100% !important;
+            width: 360px !important;
+            height: 480px!important;
         }
     }
 }
@@ -3516,11 +3517,15 @@ button[aria-expanded='false']>.faq-icon {
 // }
 // #capture {
 //     width: 100% !important;
-//     height: auto;
+//     height: auto !important;
 // }
-#snapshot {
-    img {
-        width: 100% !important;
-        height: auto !important;
-    }
-}
+// #snapshot {
+//     img {
+//         width: 100% !important;
+//         height: auto !important;
+//     }
+// }
+// #stream {
+//     -webkit-transform: scaleX(-1);
+//     transform: scaleX(-1);
+// }

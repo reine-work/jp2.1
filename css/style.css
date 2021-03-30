@@ -4173,14 +4173,15 @@ button[aria-expanded='false'] > .faq-icon {
 
 .canvas-container #captured-selfie {
   width: 100% !important;
+  height: auto !important;
 }
 
 @media (max-width: 767px) {
   .canvas-container #captured-selfie {
     text-align: center;
     margin: 0 auto;
-    width: 100vw !important;
-    height: 100% !important;
+    width: 360px !important;
+    height: 480px !important;
   }
 }
 
@@ -4195,10 +4196,5 @@ button[aria-expanded='false'] > .faq-icon {
   margin: 0 auto;
   left: 0;
   right: 0;
-}
-
-#snapshot img {
-  width: 100% !important;
-  height: auto !important;
 }
 /*# sourceMappingURL=style.css.map */
