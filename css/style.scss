@@ -3483,8 +3483,10 @@ button[aria-expanded='false']>.faq-icon {
 }
 
 #captured-selfie {
-    width: 100vw !important;
-    height: 100vh !important;
+    width: 100% !important;
+    @include for-tablet {
+        width: 100% !important;
+    }
 }
 
 .selfie-camera-content {

@@ -4166,8 +4166,13 @@ button[aria-expanded='false'] > .faq-icon {
 }
 
 #captured-selfie {
-  width: 100vw !important;
-  height: 100vh !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  #captured-selfie {
+    width: 100% !important;
+  }
 }
 
 .selfie-camera-content {
