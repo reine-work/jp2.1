@@ -3532,3 +3532,10 @@ button[aria-expanded='false']>.faq-icon {
 //     -webkit-transform: scaleX(-1);
 //     transform: scaleX(-1);
 // }
+#selfie-camera-modal {
+    z-index: 6000 !important;
+    p,
+    li {
+        font-size: 0.9rem;
+    }
+}

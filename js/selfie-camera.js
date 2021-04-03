@@ -43,11 +43,10 @@
     var photo = null;
     var startbutton = null;
 
-
     function startup() {
         video = document.getElementById('video');
         canvas = document.getElementById('canvas');
-        photo = document.getElementById('photo');
+        photo = document.getElementById('selfie-rendered');
         startbutton = document.getElementById('startbutton');
 
         navigator.mediaDevices.getUserMedia({ video: true, audio: false })
@@ -59,7 +58,7 @@
                 console.log("An error occurred: " + err);
             });
 
-        video.setAttribute("playsinline", true);
+        video.setAttribute("playsinline", true); // Fix for iOS rendering issue
         video.addEventListener('canplay', function(ev) {
             if (!streaming) {
                 height = video.videoHeight / (video.videoWidth / width);
@@ -92,8 +91,6 @@
 
     function clearphoto() {
         var context = canvas.getContext('2d');
-        // context.translate(video.videoWidth, 0);
-        // context.scale(-1, 1);
         context.fillStyle = "#AAA";
         context.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -109,15 +106,11 @@
 
     function takepicture() {
         var context = canvas.getContext('2d');
-
-        // translate context to center of canvas
-        context.translate(canvas.width, 0);
-        // flip context horizontally
-        context.scale(-1, 1);
-
         if (width && height) {
             canvas.width = width;
             canvas.height = height;
+            context.translate(video.width, 0);
+            context.scale(-1, 1);
             context.drawImage(video, 0, 0, width, height);
 
             var data = canvas.toDataURL('image/png');

@@ -63,18 +63,15 @@
                 <div class="row justify-content-center">
 
                     <div class="col-lg-6 col-md-8">
-                        <div class="camera">
-                            <video id="video">Video stream not available.</video>
-                            <button id="startbutton">Take photo</button>
-                        </div>
+                        <button class="btn btn-light btn-block" data-toggle="modal" data-target="#selfie-camera-modal"><i class="las la-user-circle"></i> Add Selfie</button>
 
-                        <div class="canvas-container">
-                            <canvas id="canvas">
-                            </canvas>
+                        <div class="canvas-container mt-3">
+                            <canvas id="canvas" class="d-none"></canvas>
                             <div class="output">
-                                <img id="photo" alt="The screen capture will appear in this box.">
+                                <img id="selfie-rendered" alt="The screen capture will appear in this box.">
                             </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -86,13 +83,25 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Selfie Camera</h5>
+                    <h5 class="my-0 py-0" id="exampleModalLabel"><strong>Customer Identification Notice</strong></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                <span aria-hidden="true"><i class="las la-times"></i></span>
               </button>
                 </div>
                 <div class="modal-body">
+                    <p>To ensure proper customer identification for KYC/AML compliance check, we require you to take a live selfie of yourself while holding a valid government ID.</p>
+
+                    <ul>
+                        <li>Position your face at the center of the camera while holding your ID below your chin</li>
+                        <li>Ensure that you are not blocking the important information on your ID</li>
+                        <li>Make sure you have a proper lighting</li>
+                    </ul>
+
                     <div class="selfie-camera-content">
+                        <div class="camera">
+                            <video id="video">Video stream not available.</video>
+                            <button id="startbutton" class="btn btn-secondary btn-block" data-dismiss="modal"><i class="las la-camera"></i> Take photo</button>
+                        </div>
                     </div>
                 </div>
             </div>

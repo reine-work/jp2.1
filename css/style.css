@@ -4164,4 +4164,13 @@ button[aria-expanded='false'] > .faq-icon {
   transform: scaleX(-1);
   width: 100% !important;
 }
+
+#selfie-camera-modal {
+  z-index: 6000 !important;
+}
+
+#selfie-camera-modal p,
+#selfie-camera-modal li {
+  font-size: 0.9rem;
+}
 /*# sourceMappingURL=style.css.map */
