@@ -43,6 +43,7 @@
     var photo = null;
     var startbutton = null;
 
+
     function startup() {
         video = document.getElementById('video');
         canvas = document.getElementById('canvas');
@@ -58,6 +59,7 @@
                 console.log("An error occurred: " + err);
             });
 
+        video.setAttribute("playsinline", true);
         video.addEventListener('canplay', function(ev) {
             if (!streaming) {
                 height = video.videoHeight / (video.videoWidth / width);
