@@ -3476,40 +3476,43 @@ button[aria-expanded='false']>.faq-icon {
     }
 }
 
-#selfie-camera {
+#video {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     width: 100% !important;
 }
 
-.canvas-container {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    #captured-selfie {
-        width: 100% !important;
-        height: auto !important;
-        @include for-phone {
-            text-align: center;
-            margin: 0 auto;
-            width: 360px !important;
-            height: 480px!important;
-        }
-    }
-}
-
-.selfie-camera-content {
-    position: relative;
-    width: 100%;
-    #capture-btn {
-        position: absolute;
-        bottom: 20px;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-    }
-}
-
+// #selfie-camera {
+//     -webkit-transform: scaleX(-1);
+//     transform: scaleX(-1);
+//     width: 100% !important;
+// }
+// .canvas-container {
+//     overflow: hidden;
+//     width: 100%;
+//     position: relative;
+//     #captured-selfie {
+//         width: 100% !important;
+//         height: auto !important;
+//         @include for-phone {
+//             text-align: center;
+//             margin: 0 auto;
+//             width: 360px !important;
+//             height: 480px!important;
+//         }
+//     }
+// }
+// .selfie-camera-content {
+//     position: relative;
+//     width: 100%;
+//     #capture-btn {
+//         position: absolute;
+//         bottom: 20px;
+//         margin: 0 auto;
+//         left: 0;
+//         right: 0;
+//     }
+// }
 // #stream {
 //     -webkit-transform: scaleX(-1);
 //     transform: scaleX(-1);
