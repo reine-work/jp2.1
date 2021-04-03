@@ -3539,3 +3539,15 @@ button[aria-expanded='false']>.faq-icon {
         font-size: 0.9rem;
     }
 }
+
+#video {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill;
+}
+
+#selfie-rendered {
+    width: 100% !important;
+}
