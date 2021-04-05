@@ -3476,12 +3476,6 @@ button[aria-expanded='false']>.faq-icon {
     }
 }
 
-#video {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    width: 100% !important;
-}
-
 // #selfie-camera {
 //     -webkit-transform: scaleX(-1);
 //     transform: scaleX(-1);
@@ -3540,7 +3534,7 @@ button[aria-expanded='false']>.faq-icon {
     }
 }
 
-#video {
+#selfie-stream {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     width: 100% !important;

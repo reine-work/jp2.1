@@ -66,8 +66,8 @@
                         <button class="btn btn-light btn-block" data-toggle="modal" data-target="#selfie-camera-modal"><i class="las la-user-circle"></i> Add Selfie</button>
 
                         <div class="canvas-container mt-3">
-                            <canvas id="canvas" class="d-none"></canvas>
-                            <div class="output">
+                            <canvas id="selfie-canvas" class="d-none"></canvas>
+                            <div class="selfie-output">
                                 <img id="selfie-rendered" alt="The screen capture will appear in this box.">
                             </div>
                         </div>
@@ -99,8 +99,8 @@
 
                     <div class="selfie-camera-content">
                         <div class="camera">
-                            <video id="video">Video stream not available.</video>
-                            <button id="startbutton" class="btn btn-secondary btn-block" data-dismiss="modal"><i class="las la-camera"></i> Take photo</button>
+                            <video id="selfie-stream">Video stream not available.</video>
+                            <button id="capture-selfie-btn" class="btn btn-secondary btn-block" data-dismiss="modal"><i class="las la-camera"></i> Take photo</button>
                         </div>
                     </div>
                 </div>

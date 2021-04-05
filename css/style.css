@@ -4159,12 +4159,6 @@ button[aria-expanded='false'] > .faq-icon {
   }
 }
 
-#video {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  width: 100% !important;
-}
-
 #selfie-camera-modal {
   z-index: 6000 !important;
 }
@@ -4174,7 +4168,7 @@ button[aria-expanded='false'] > .faq-icon {
   font-size: 0.9rem;
 }
 
-#video {
+#selfie-stream {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   width: 100% !important;
