@@ -3508,7 +3508,9 @@ button[aria-expanded='false']>.faq-icon {
 .selfie-camera-content {
     position: relative;
     .btn {
-        width: 75%;
+        @include for-tablet {
+            width: 75%;
+        }
     }
     #capture-selfie-btn {
         position: absolute;

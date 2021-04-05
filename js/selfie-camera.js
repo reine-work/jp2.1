@@ -79,6 +79,7 @@
             document.getElementById("retake-selfie").disabled = false;
 
         } else {
+            document.getElementById("retake-selfie").disabled = true;
             clearphoto();
         }
     }

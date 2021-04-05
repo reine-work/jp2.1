@@ -4194,8 +4194,10 @@ button[aria-expanded='false'] > .faq-icon {
   position: relative;
 }
 
-.selfie-camera-content .btn {
-  width: 75%;
+@media (max-width: 768px) {
+  .selfie-camera-content .btn {
+    width: 75%;
+  }
 }
 
 .selfie-camera-content #capture-selfie-btn {
