@@ -3507,9 +3507,12 @@ button[aria-expanded='false']>.faq-icon {
 
 .selfie-camera-content {
     position: relative;
+    .btn {
+        width: 75%;
+    }
     #capture-selfie-btn {
         position: absolute;
-        bottom: 4rem;
+        bottom: 3rem;
         left: 0;
         right: 0;
         z-index: 7000;
