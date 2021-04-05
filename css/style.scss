@@ -3476,56 +3476,15 @@ button[aria-expanded='false']>.faq-icon {
     }
 }
 
-// #selfie-camera {
-//     -webkit-transform: scaleX(-1);
-//     transform: scaleX(-1);
-//     width: 100% !important;
-// }
-// .canvas-container {
-//     overflow: hidden;
-//     width: 100%;
-//     position: relative;
-//     #captured-selfie {
-//         width: 100% !important;
-//         height: auto !important;
-//         @include for-phone {
-//             text-align: center;
-//             margin: 0 auto;
-//             width: 360px !important;
-//             height: 480px!important;
-//         }
-//     }
-// }
-// .selfie-camera-content {
-//     position: relative;
-//     width: 100%;
-//     #capture-btn {
-//         position: absolute;
-//         bottom: 20px;
-//         margin: 0 auto;
-//         left: 0;
-//         right: 0;
-//     }
-// }
-// #stream {
-//     -webkit-transform: scaleX(-1);
-//     transform: scaleX(-1);
-//     width: 100% !important;
-// }
-// #capture {
-//     width: 100% !important;
-//     height: auto !important;
-// }
-// #snapshot {
-//     img {
-//         width: 100% !important;
-//         height: auto !important;
-//     }
-// }
-// #stream {
-//     -webkit-transform: scaleX(-1);
-//     transform: scaleX(-1);
-// }
+// selfie 
+#selfie-guide-modal {
+    z-index: 6000 !important;
+    p,
+    li {
+        font-size: 0.9rem;
+    }
+}
+
 #selfie-camera-modal {
     z-index: 6000 !important;
     p,
@@ -3539,9 +3498,35 @@ button[aria-expanded='false']>.faq-icon {
     transform: scaleX(-1);
     width: 100% !important;
     height: 100% !important;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 #selfie-rendered {
     width: 100% !important;
+}
+
+.selfie-camera-content {
+    position: relative;
+    #capture-selfie-btn {
+        position: absolute;
+        bottom: 4rem;
+        left: 0;
+        right: 0;
+        z-index: 7000;
+        border-radius: 30px;
+        margin: 0 auto;
+        vertical-align: middle;
+        i {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+    }
+}
+
+.btn-group.camera-buttons {
+    display: flex;
+}
+
+.camera-buttons .btn {
+    flex: 1
 }

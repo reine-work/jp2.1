@@ -4159,6 +4159,15 @@ button[aria-expanded='false'] > .faq-icon {
   }
 }
 
+#selfie-guide-modal {
+  z-index: 6000 !important;
+}
+
+#selfie-guide-modal p,
+#selfie-guide-modal li {
+  font-size: 0.9rem;
+}
+
 #selfie-camera-modal {
   z-index: 6000 !important;
 }
@@ -4173,11 +4182,43 @@ button[aria-expanded='false'] > .faq-icon {
   transform: scaleX(-1);
   width: 100% !important;
   height: 100% !important;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #selfie-rendered {
   width: 100% !important;
+}
+
+.selfie-camera-content {
+  position: relative;
+}
+
+.selfie-camera-content #capture-selfie-btn {
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  right: 0;
+  z-index: 7000;
+  border-radius: 30px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.selfie-camera-content #capture-selfie-btn i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.btn-group.camera-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.camera-buttons .btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /*# sourceMappingURL=style.css.map */

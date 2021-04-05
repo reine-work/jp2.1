@@ -63,15 +63,17 @@
                 <div class="row justify-content-center">
 
                     <div class="col-lg-6 col-md-8">
-                        <button class="btn btn-light btn-block" data-toggle="modal" data-target="#selfie-camera-modal"><i class="las la-user-circle"></i> Add Selfie</button>
+                        <div class="btn-group camera-buttons" role="group">
+                            <button class="btn btn-light" data-toggle="modal" data-target="#selfie-guide-modal"><i class="las la-image"></i> Add Selfie</button>
+                            <button class="btn btn-light" data-toggle="modal" data-target="#selfie-camera-modal" id="retake-selfie" disabled><i class="las la-redo-alt"></i> Retake</button>
+                        </div>
 
                         <div class="canvas-container mt-3">
                             <canvas id="selfie-canvas" class="d-none"></canvas>
                             <div class="selfie-output">
-                                <img id="selfie-rendered" alt="The screen capture will appear in this box.">
+                                <img id="selfie-rendered" alt="The captured selfie will appear in this box.">
                             </div>
                         </div>
-
                     </div>
 
                 </div>
@@ -79,8 +81,8 @@
         </div>
     </section>
 
-    <div class="modal fade" id="selfie-camera-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal" id="selfie-guide-modal" data-backdrop="static" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="my-0 py-0" id="exampleModalLabel"><strong>Customer Identification Notice</strong></h5>
@@ -94,13 +96,35 @@
                     <ul>
                         <li>Position your face at the center of the camera while holding your ID below your chin</li>
                         <li>Ensure that you are not blocking the important information on your ID</li>
-                        <li>Make sure you have a proper lighting</li>
+                        <li>Make sure you have proper lighting</li>
                     </ul>
 
+                    <div class="text-center mt-5">
+                        <img src="images/others/selfie-with-id.png" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#selfie-camera-modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="selfie-camera-modal" data-backdrop="static" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="my-0 py-0" id="exampleModalLabel"><strong>Take Selfie</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="las la-times"></i></span>
+              </button>
+                </div>
+                <div class="modal-body">
                     <div class="selfie-camera-content">
                         <div class="camera">
                             <video id="selfie-stream">Video stream not available.</video>
-                            <button id="capture-selfie-btn" class="btn btn-secondary btn-block" data-dismiss="modal"><i class="las la-camera"></i> Take photo</button>
+                            <button id="capture-selfie-btn" class="btn btn-secondary" data-dismiss="modal"><i class="las la-camera"></i> Capture photo</button>
                         </div>
                     </div>
                 </div>

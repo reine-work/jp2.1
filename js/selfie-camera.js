@@ -64,7 +64,6 @@
     }
 
     // Capture selfie
-
     function takepicture() {
         var context = canvas.getContext('2d');
         if (width && height) {
@@ -76,6 +75,9 @@
 
             var data = canvas.toDataURL('image/png');
             photo.setAttribute('src', data);
+
+            document.getElementById("retake-selfie").disabled = false;
+
         } else {
             clearphoto();
         }
@@ -83,3 +85,8 @@
 
     window.addEventListener('load', startup, false);
 })();
+
+// Open camera modal
+$('#selfie-camera-modal').on('show.bs.modal', function(event) {
+    $('#selfie-guide-modal').modal('hide');
+})
