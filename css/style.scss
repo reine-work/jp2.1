@@ -379,7 +379,7 @@ textarea {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 5000;
+    z-index: 1000;
     transition: 0.2s ease-in-out;
     .navbar-nav li {
         margin: 0 1rem;
@@ -562,7 +562,7 @@ textarea {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 #loadingMessage {
@@ -1029,7 +1029,7 @@ ul.social-icons {
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 9000;
+        z-index: 2000;
         .list-group {
             @include for-tablet {
                 flex-direction: unset;
@@ -1518,7 +1518,7 @@ ul.social-icons {
     right: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 1000;
     transition: all 0.2s ease-in-out;
 }
 
@@ -2465,7 +2465,7 @@ ul.social-icons {
 }
 
 .team-modal {
-    z-index: 9999;
+    z-index: 9000;
 }
 
 // Help Center

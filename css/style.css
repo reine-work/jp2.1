@@ -335,7 +335,7 @@ textarea {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 5000;
+  z-index: 1000;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
@@ -572,7 +572,7 @@ textarea {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 #loadingMessage {
@@ -1158,7 +1158,7 @@ ul.social-icons li img {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 9000;
+    z-index: 2000;
   }
 }
 
@@ -1751,7 +1751,7 @@ ul.social-icons li img {
   right: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 1000;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -2892,7 +2892,7 @@ ul.social-icons li img {
 }
 
 .team-modal {
-  z-index: 9999;
+  z-index: 9000;
 }
 
 .help-center-header {
