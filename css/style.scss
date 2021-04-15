@@ -2091,6 +2091,11 @@ ul.social-icons {
 
 .video-filter {
     gap: 10px;
+    #video-search {
+        @include for-phone {
+            margin-right: 150px;
+        }
+    }
     input {
         height: 42px;
     }

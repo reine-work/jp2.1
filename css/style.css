@@ -2449,6 +2449,12 @@ ul.social-icons li img {
   gap: 10px;
 }
 
+@media (max-width: 767px) {
+  .video-filter #video-search {
+    margin-right: 150px;
+  }
+}
+
 .video-filter input {
   height: 42px;
 }
