@@ -18,14 +18,13 @@
     }
 }
 
-@mixin for-tablet-up {
-    @media (min-width: 768px) {
-        @content;
-    }
-}
-
+// @mixin for-tablet-up {
+//     @media (min-width: 768px) {
+//         @content;
+//     }
+// }
 @mixin for-tablet {
-    @media (max-width: 768px) {
+    @media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
         @content;
     }
 }
@@ -1719,15 +1718,15 @@ ul.social-icons {
     .example.example2 input:-webkit-autofill {
         -webkit-text-fill-color: #e39f48;
         transition: background-color 100000000s;
-        -webkit-animation: 1ms void-animation-out;
+        // -webkit-animation: 1ms void-animation-out;
     }
     .example.example2 .StripeElement--webkit-autofill {
         background: transparent !important;
     }
-    .example.example2 input,
-    .example.example2 button {
-        -webkit-animation: 1ms void-animation-out;
-    }
+    // .example.example2 input,
+    // .example.example2 button {
+    //     // -webkit-animation: 1ms void-animation-out;
+    // }
     .example.example2 button {
         display: block;
         height: 50px;
@@ -2070,15 +2069,30 @@ ul.social-icons {
         }
     }
     @include for-tablet {
-        padding: 5rem 2rem;
+        padding: 3rem 2rem;
+        min-height: 350px;
+    }
+    @include for-phone {
+        padding: 3rem 2rem;
+        min-height: 350px;
     }
 }
 
 .video-list {
     position: relative;
-    top: -100px;
+    padding: 3rem 0;
     @include for-tablet {
-        padding: 1rem;
+        padding: 2rem;
+    }
+    @include for-phone {
+        padding: 2rem 1rem;
+    }
+}
+
+.video-filter {
+    gap: 10px;
+    input {
+        height: 42px;
     }
 }
 
@@ -2706,7 +2720,7 @@ button[aria-expanded='false']>.faq-icon {
         padding: 4rem 1rem;
     }
     @include for-tablet {
-        padding: 3rem 1rem 0 1rem;
+        padding: 3rem 1rem;
         margin-bottom: 0;
     }
     @include for-phone {
@@ -3024,6 +3038,7 @@ button[aria-expanded='false']>.faq-icon {
         width: 300px;
         @include for-tablet {
             width: 175px;
+            height: auto;
         }
     }
     .steps-hover {
@@ -3057,19 +3072,11 @@ button[aria-expanded='false']>.faq-icon {
     }
 }
 
-.ss-step {
-    width: 300px;
-}
-
 .steps-name {
     color: $primary-color;
     font-weight: 700;
     margin-top: 1rem;
     @extend .section-header;
-    @include for-tablet {
-        font-size: 0.9rem;
-        height: 40px;
-    }
     @include for-tablet-landscape {
         font-size: 1.2rem;
     }
@@ -3078,7 +3085,7 @@ button[aria-expanded='false']>.faq-icon {
     }
     @include for-tablet {
         font-size: 1rem;
-        height: auto;
+        height: 38px;
     }
 }
 

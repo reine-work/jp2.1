@@ -85,7 +85,7 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   #main-banner .banner-caption {
     margin-top: 58px;
     min-height: 60vh;
@@ -105,13 +105,13 @@ a {
   letter-spacing: -2px;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   #main-banner .banner-caption h2 {
     font-size: 3rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   #main-banner .banner-caption h2 {
     font-size: 2.5rem;
   }
@@ -122,7 +122,7 @@ a {
   font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   #main-banner .banner-caption p {
     font-size: 1rem;
   }
@@ -139,7 +139,7 @@ a {
   image-rendering: auto;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   #main-banner .banner-screens {
     display: none;
   }
@@ -154,7 +154,7 @@ a {
   color: #362e8b;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .home-title {
     font-size: 1.75rem;
   }
@@ -170,7 +170,7 @@ a {
   padding-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .home-intro {
     padding: 3rem 1rem;
   }
@@ -186,7 +186,7 @@ a {
   max-width: 75ch;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .intro-content {
     margin-bottom: 3rem;
   }
@@ -198,7 +198,7 @@ a {
   vertical-align: middle;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .feat-content {
     height: 200px;
   }
@@ -207,6 +207,7 @@ a {
 @media (max-width: 767px) {
   .feat-content {
     text-align: center;
+    height: auto;
   }
 }
 
@@ -216,19 +217,19 @@ a {
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .feat-content h3 {
     font-size: 1.5rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .feat-content p {
     font-size: 0.9rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .feat-content-img img {
     width: 200px;
   }
@@ -251,7 +252,7 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .home-steps {
     padding: 3rem 1rem 0 1rem;
     margin-bottom: 0;
@@ -436,7 +437,7 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .steps-description {
     height: 108px;
   }
@@ -458,13 +459,6 @@ a {
   margin-top: 1rem;
 }
 
-@media (max-width: 768px) {
-  .steps-name {
-    font-size: 1rem;
-    height: 40px;
-  }
-}
-
 @media (max-width: 1024px) and (orientation: landscape) {
   .steps-name {
     font-size: 1.2rem;
@@ -477,10 +471,10 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .steps-name {
     font-size: 1rem;
-    height: auto;
+    height: 38px;
   }
 }
 
@@ -489,7 +483,7 @@ a {
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .steps-description,
   .home-steps .steps-content p {
     font-size: 0.9rem;
@@ -507,7 +501,7 @@ a {
   border-bottom: none !important;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .timeline-video {
     position: relative;
   }
@@ -524,13 +518,13 @@ a {
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .home-play-button h3 {
     font-size: 1.5rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .home-play-button p {
     font-size: 0.9rem;
   }
@@ -553,7 +547,7 @@ a {
   border-bottom: solid 1px #f0f0f0;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .home-merchants {
     padding: 3rem 1rem 5rem 1rem;
   }
@@ -612,7 +606,7 @@ footer .copyright-bar .copyright p {
   font-size: 1.4em;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .nav-cta {
     display: none;
   }
@@ -622,7 +616,7 @@ footer .copyright-bar .copyright p {
   padding: 0 1rem;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .nav-cta-resp .nav-cta {
     display: block !important;
   }
@@ -634,7 +628,7 @@ footer .copyright-bar .copyright p {
   min-height: 500px;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .business-sub-container {
     padding: 3rem 1rem;
   }
@@ -644,7 +638,7 @@ footer .copyright-bar .copyright p {
   padding: 5rem 0;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .business-sub-container .pricing-content {
     padding: 0 1rem;
     text-align: center;
@@ -665,7 +659,7 @@ footer .copyright-bar .copyright p {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .pricing-terms {
     margin: 1rem 0;
   }
@@ -691,7 +685,7 @@ footer .copyright-bar .copyright p {
   border-radius: 0.35rem;
 }
 
-@media (max-width: 768px) {
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .pricing-calculator {
     margin-top: 2rem;
   }

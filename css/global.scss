@@ -17,14 +17,32 @@
     }
 }
 
+@mixin for-tablet-up {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
 @mixin for-tablet {
-    @media (max-width: 768px) {
+    @media (max-width: 834px) {
         @content;
     }
 }
 
 @mixin for-tablet-landscape {
     @media (max-width: 1024px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin for-desktop-md {
+    @media (max-width: 1366px) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media (min-width: 1024px) {
         @content;
     }
 }

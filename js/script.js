@@ -1,8 +1,3 @@
-// page focus on top on page load
-$(document).ready(function() {
-    $(this).scrollTop(0);
-});
-
 // sticky navbar
 function sticky_relocate() {
     if ($(window).scrollTop() > $("#content-anchor").offset().top) {
