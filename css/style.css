@@ -2451,7 +2451,7 @@ ul.social-icons li img {
 
 @media (max-width: 767px) {
   .video-filter #video-search {
-    margin-right: 150px;
+    max-width: 150px;
   }
 }
 

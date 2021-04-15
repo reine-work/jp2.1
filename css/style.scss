@@ -2093,7 +2093,7 @@ ul.social-icons {
     gap: 10px;
     #video-search {
         @include for-phone {
-            margin-right: 150px;
+            max-width: 150px;
         }
     }
     input {
