@@ -2082,7 +2082,7 @@ ul.social-icons {
     position: relative;
     padding: 3rem 0;
     @include for-tablet {
-        padding: 2rem;
+        padding: 2rem 1rem;
     }
     @include for-phone {
         padding: 2rem 1rem;
@@ -2092,8 +2092,11 @@ ul.social-icons {
 .video-filter {
     gap: 10px;
     #video-search {
+        @include for-tablet {
+            max-width: 220px;
+        }
         @include for-phone {
-            max-width: 150px;
+            max-width: 165px;
         }
     }
     input {

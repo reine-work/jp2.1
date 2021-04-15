@@ -2435,7 +2435,7 @@ ul.social-icons li img {
 
 @media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .video-list {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -2449,9 +2449,15 @@ ul.social-icons li img {
   gap: 10px;
 }
 
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  .video-filter #video-search {
+    max-width: 220px;
+  }
+}
+
 @media (max-width: 767px) {
   .video-filter #video-search {
-    max-width: 150px;
+    max-width: 165px;
   }
 }
 
