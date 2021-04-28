@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>My Business Area | JazzyPay Inc.</title>
+
+    <!-- Global CSS Files -->
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/modules/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+
+    <body>
+
+        <div id="app">
+            <div class="main-wrapper main-wrapper-1">
+                <div class="main-sidebar sidebar-style-2">
+
+                    <aside id="sidebar-wrapper">
+                        <div class="sidebar-brand">
+                            <a href="../admin/dashboard.html">
+                                <img src="assets/img/jazzypay-icon.png" width="30" />
+                                <span>Admin Area</span>
+                            </a>
+                        </div>
+                        <div class="sidebar-brand sidebar-brand-sm">
+                            <a href="../admin/dashboard.html">JP</a>
+                        </div>
+                        <div class="user-widget text-center px-2 py-2 mt-5">
+                            <img src="../images/others/sample-user.jpg" width="100" class="rounded-circle mb-3" />
+                            <h5 class="mb-0 pb-0">John Smith</h5>
+                            <p>jsmith@email.com</p>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <li><a class="nav-link" href="dashboard.html"><i class="las la-rocket"></i><span>Dashboard</span></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link has-dropdown"><i class="las la-user"></i><span>Account Settings</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="change-password.html">Change Password</a></li>
+                                    <li><a class="nav-link" href="update-profile.html">Update Profile</a></li>
+                                    <li><a class="nav-link" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav-link" href="manage-admin.html"><i class="las la-user-cog"></i><span>Manage Admins</span></a></li>
+                            <li><a class="nav-link" href="#"><i class="las la-comment"></i><span>Manage Contact</span></a></li>
+                            <li><a class="nav-link" href="#"><i class="las la-store-alt"></i><span>Manage Merchants</span></a></li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <section class="section">
+                        <div class="section-header">
+                            <a href="#" data-toggle="sidebar" class="d-lg-none sidebar-toggle"><i class="las la-bars"></i></a>
+                            <h1 class="ml-3">Add a Voucher</h1>
+                        </div>
+
+                        <div class="section-body pb-5">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+
+                                    <div class="mb-5">
+                                        <h4>Add a Voucher</h4>
+                                    </div>
+
+                                    <form class="mt-2">
+
+                                        <!-- For success/error messages -->
+
+                                        <!-- <div class="alert alert-success" role="alert">
+                                            A simple success alert—check it out!
+                                        </div> -->
+
+                                        <div class="form-group">
+                                            <label>Voucher Name *</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Price *</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Available Quantity *</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <!-- <div class="form-group">
+                                            <label>Category *</label>
+                                            <select class="custom-select">
+                                                <option value="1">Announcements</option>
+                                                <option value="2" selected>Uncategorized</option>
+                                                <option value="3">Articles</option>
+                                            </select>
+                                        </div> -->
+                                        <div class="form-group">
+                                            <label>Valid From *</label>
+                                            <div class="input-group">
+                                                <input type="date" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Valid Until *</label>
+                                            <div class="input-group">
+                                                <input type="date" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Upload Voucher Poster *</label>
+                                            <div class="custom-file mb-1">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                            </div>
+                                            <small><em>Recommended Image Dimension: 600 x 600</em></small><br />
+                                            <small><em>Maximum File Size: 1MB</em></small>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Description *</label>
+                                            <div class="wysiwyg-vouch-desc">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Terms *</label>
+                                            <div class="wysiwyg-vouch-terms">
+                                            </div>
+                                        </div>
+
+                                        <div class="text-right">
+                                            <button class="btn btn-light">Cancel</button>
+                                            <button class="btn btn-secondary">Add Voucher</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Global Scripts -->
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+        <script src="assets/modules/popper.js"></script>
+        <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="assets/modules/moment.min.js"></script>
+
+        <script src="assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+
+        <!-- WYSIWYG Editor -->
+        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+        <!-- Template JS File -->
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/wysiwyg.js"></script>
+    </body>
+
+</html>

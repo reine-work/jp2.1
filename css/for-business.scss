@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 // media quaries
 @mixin for-phone-landscape {
     @media (max-width: 767px) and (orientation: landscape) {
@@ -153,23 +154,27 @@ a {
         }
         @include for-phone {
             margin-top: 58px;
-            min-height: 80vh;
+            min-height: 93vh;
+            padding: 0;
         }
         h2 {
             color: $primary-color;
             font-size: 3.75rem;
-            letter-spacing: -2px;
+            letter-spacing: -1px;
             @include for-tablet {
                 font-size: 3rem;
             }
-            @include for-tablet {
-                font-size: 2.5rem;
+            @include for-phone {
+                font-size: 2rem;
             }
         }
         p {
             color: $black;
             font-size: 1.5rem;
             @include for-tablet {
+                font-size: 1rem;
+            }
+            @include for-phone {
                 font-size: 1rem;
             }
         }
@@ -183,6 +188,9 @@ a {
             image-rendering: auto;
         }
         @include for-tablet {
+            display: none;
+        }
+        @include for-phone {
             display: none;
         }
     }
@@ -240,12 +248,18 @@ a {
         font-size: 1.75rem;
         font-weight: 700;
         @include for-tablet {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
+        }
+        @include for-phone {
+            font-size: 1.3rem;
         }
     }
     p {
         @include for-tablet {
             font-size: 0.9rem;
+        }
+        @include for-phone {
+            font-size: 0.95rem;
         }
     }
 }
@@ -510,6 +524,9 @@ a {
             margin-right: 6px;
         }
     }
+    @include for-phone {
+        padding: 3rem 1rem;
+    }
 }
 
 footer {
@@ -540,6 +557,15 @@ ul.social-icons li img {
     margin-bottom: 0;
 }
 
+.partner-logos {
+    @include for-tablet {
+        text-align: center;
+    }
+    @include for-phone {
+        text-align: center;
+    }
+}
+
 .partner-logos p,
 .copyright-bar .copyright p {
     color: $black;
@@ -557,16 +583,13 @@ footer .copyright-bar .copyright p {
 
 .nav-cta {
     @include for-tablet {
-        display: none;
+        padding: 0 1rem;
     }
-}
-
-.nav-cta-resp {
-    padding: 0 1rem;
-    .nav-cta {
-        @include for-tablet {
-            display: block !important;
-        }
+    @include for-tablet-landscape {
+        padding: 0 1rem;
+    }
+    @include for-phone {
+        padding: 0 1rem;
     }
 }
 

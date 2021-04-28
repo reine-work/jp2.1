@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
 body {
   font-family: "Inter", "Arial", sans-serif;
   font-size: 1rem;
@@ -95,14 +96,15 @@ a {
 @media (max-width: 767px) {
   #main-banner .banner-caption {
     margin-top: 58px;
-    min-height: 80vh;
+    min-height: 93vh;
+    padding: 0;
   }
 }
 
 #main-banner .banner-caption h2 {
   color: #362e8b;
   font-size: 3.75rem;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 @media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -111,9 +113,9 @@ a {
   }
 }
 
-@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (max-width: 767px) {
   #main-banner .banner-caption h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -123,6 +125,12 @@ a {
 }
 
 @media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  #main-banner .banner-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
   #main-banner .banner-caption p {
     font-size: 1rem;
   }
@@ -140,6 +148,12 @@ a {
 }
 
 @media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  #main-banner .banner-screens {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
   #main-banner .banner-screens {
     display: none;
   }
@@ -219,13 +233,25 @@ a {
 
 @media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .feat-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .feat-content h3 {
+    font-size: 1.3rem;
   }
 }
 
 @media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .feat-content p {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .feat-content p {
+    font-size: 0.95rem;
   }
 }
 
@@ -567,6 +593,12 @@ a {
   margin-right: 6px;
 }
 
+@media (max-width: 767px) {
+  .home-cta {
+    padding: 3rem 1rem;
+  }
+}
+
 footer {
   background: #ececfb;
 }
@@ -591,6 +623,18 @@ ul.social-icons li img {
   margin-bottom: 0;
 }
 
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  .partner-logos {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .partner-logos {
+    text-align: center;
+  }
+}
+
 .partner-logos p,
 .copyright-bar .copyright p {
   color: #111;
@@ -608,17 +652,19 @@ footer .copyright-bar .copyright p {
 
 @media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
   .nav-cta {
-    display: none;
+    padding: 0 1rem;
   }
 }
 
-.nav-cta-resp {
-  padding: 0 1rem;
+@media (max-width: 1024px) and (orientation: landscape) {
+  .nav-cta {
+    padding: 0 1rem;
+  }
 }
 
-@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
-  .nav-cta-resp .nav-cta {
-    display: block !important;
+@media (max-width: 767px) {
+  .nav-cta {
+    padding: 0 1rem;
   }
 }
 
