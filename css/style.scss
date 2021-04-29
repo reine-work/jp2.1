@@ -839,7 +839,6 @@ footer {
 #subpage-container {
     margin-top: 100px;
     min-height: 500px;
-    background: url(../images/others/about-bg.svg) right center no-repeat;
     background-attachment: fixed;
     padding: 5rem 0;
     @include for-tablet {
@@ -3739,5 +3738,85 @@ span {
     display: none;
     @include for-desktop-up {
         display: block;
+    }
+}
+
+.voucher-data-search {
+    min-height: 500px;
+}
+
+.voucher-details-table {
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+#user-voucher-list {
+    font-size: 0.9rem;
+    tr,
+    td {
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+    thead {
+        background: #f0f0f0;
+        border-radius: 4px;
+    }
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+.voucher-display-select {
+    position: absolute;
+    right: 16px;
+    select {
+        width: 120px;
+        height: 38px;
+        @include for-desktop-up {
+            width: 150px !important;
+        }
+        @include for-tablet {
+            width: 150px !important;
+        }
+    }
+}
+
+.voucher-list-filter {
+    .alert {
+        font-size: 0.9rem;
+        i {
+            font-size: 20px;
+            position: relative;
+            top: 2px;
+            margin-right: 5px;
+        }
+    }
+    .form-group {
+        width: 175px;
+    }
+}
+
+.modal-backdrop.show {
+    opacity: 0.9;
+}
+
+#modal-voucher-otp {
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+#modal-voucher-transfer {
+    p {
+        font-size: 0.9rem;
+    }
+    .iti__country-list {
+        max-width: 450px;
+    }
+    form {
+        label {
+            font-size: 0.9rem;
+        }
     }
 }

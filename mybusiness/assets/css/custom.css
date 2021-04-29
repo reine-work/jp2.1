@@ -1142,4 +1142,9 @@ input:checked + .slider:before {
   position: relative;
   top: -2px;
 }
+
+.wysiwyg-vouch-desc,
+.wysiwyg-vouch-terms {
+  height: 350px;
+}
 /*# sourceMappingURL=custom.css.map */

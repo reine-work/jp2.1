@@ -931,7 +931,6 @@ footer .copyright-bar .app-btn img {
 #subpage-container {
   margin-top: 100px;
   min-height: 500px;
-  background: url(../images/others/about-bg.svg) right center no-repeat;
   background-attachment: fixed;
   padding: 5rem 0;
 }
@@ -4467,5 +4466,91 @@ span {
   .mobile-desk-button {
     display: block;
   }
+}
+
+.voucher-data-search {
+  min-height: 500px;
+}
+
+.voucher-details-table {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+#user-voucher-list {
+  font-size: 0.9rem;
+}
+
+#user-voucher-list tr,
+#user-voucher-list td {
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+#user-voucher-list thead {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+#user-voucher-list button {
+  font-size: 0.9rem;
+}
+
+.voucher-display-select {
+  position: absolute;
+  right: 16px;
+}
+
+.voucher-display-select select {
+  width: 120px;
+  height: 38px;
+}
+
+@media (min-width: 1200px) {
+  .voucher-display-select select {
+    width: 150px !important;
+  }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  .voucher-display-select select {
+    width: 150px !important;
+  }
+}
+
+.voucher-list-filter .alert {
+  font-size: 0.9rem;
+}
+
+.voucher-list-filter .alert i {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+}
+
+.voucher-list-filter .form-group {
+  width: 175px;
+}
+
+.modal-backdrop.show {
+  opacity: 0.9;
+}
+
+#modal-voucher-otp p {
+  font-size: 0.9rem;
+}
+
+#modal-voucher-transfer p {
+  font-size: 0.9rem;
+}
+
+#modal-voucher-transfer .iti__country-list {
+  max-width: 450px;
+}
+
+#modal-voucher-transfer form label {
+  font-size: 0.9rem;
 }
 /*# sourceMappingURL=style.css.map */
