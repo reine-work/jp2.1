@@ -4312,19 +4312,15 @@ button[aria-expanded='false'] > .faq-icon {
   margin-left: 15px;
 }
 
-@media (max-width: 767px) {
-  .voucher-filter p {
-    text-align: center;
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  .voucher-filter {
+    margin-bottom: 1rem;
   }
-}
-
-.voucher-filter .voucher-search {
-  padding-right: 10px;
 }
 
 @media (max-width: 767px) {
   .voucher-filter .voucher-search {
-    margin: 0.5rem 0;
+    margin: 0 0 1rem 0;
   }
 }
 
@@ -4332,48 +4328,6 @@ button[aria-expanded='false'] > .faq-icon {
   height: 38px;
   font-size: 0.95rem;
   padding: 8px 30px 8px 15px;
-}
-
-.voucher-qty .count {
-  color: #000;
-  display: inline-block;
-  vertical-align: top;
-  font-size: 15px;
-  padding: 0 2px;
-  width: 80px;
-  min-width: 30px;
-  height: 25px;
-  text-align: center;
-  background: #fff;
-  border: solid 1px #eee;
-  border-radius: 4px;
-}
-
-.voucher-qty .plus {
-  cursor: pointer;
-  display: inline-block;
-  vertical-align: top;
-  border: solid 1px #eee;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-.voucher-qty .minus {
-  cursor: pointer;
-  display: inline-block;
-  vertical-align: top;
-  border: solid 1px #eee;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 4px;
-  background-clip: padding-box;
 }
 
 .minus:hover {
@@ -4552,5 +4506,145 @@ span {
 
 #modal-voucher-transfer form label {
   font-size: 0.9rem;
+}
+
+.bag-icon {
+  vertical-align: middle;
+  padding: 5px 0;
+  height: 38px;
+  text-align: right;
+}
+
+.bag-icon img {
+  width: 25px;
+  display: inline;
+  margin-right: 5px;
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  .bag-icon img {
+    margin: 0;
+    width: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bag-icon img {
+    margin: 0;
+    width: 20px;
+  }
+}
+
+.bag-icon p {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  position: relative;
+  top: 3px;
+  font-weight: normal;
+  font-size: 0.9rem !important;
+  color: #111;
+}
+
+@media (max-width: 767px) {
+  .bag-icon p {
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .voucher-cart-header p {
+    text-align: center;
+  }
+}
+
+.voucher-cart-item h6 {
+  font-size: 1rem;
+}
+
+.voucher-cart-item p {
+  font-size: 1rem !important;
+}
+
+.voucher-cart-item span {
+  font-size: 0.9rem !important;
+  display: block;
+}
+
+.voucher-cart-item button {
+  font-size: 0.85rem !important;
+  padding: 0;
+}
+
+.voucher-cart-item .voucher-cart-item-delete {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+}
+
+.voucher-cart-item .voucher-cart-item-delete button {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+}
+
+.voucher-cart-total {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .voucher-cart-total {
+    text-align: center;
+  }
+}
+
+#modal-voucher-cart-delete p {
+  font-size: 0.9rem;
+}
+
+.close {
+  font-weight: 300;
+  font-size: 28px;
+  position: relative;
+  top: -3px;
+  right: -3px;
+}
+
+.voucher-qty-cart .input-group {
+  width: 100px;
+}
+
+.voucher-qty-cart .bootstrap-touchspin .input-group-btn-vertical {
+  top: -4px;
+}
+
+.voucher-qty-cart button,
+.voucher-qty-cart .btn {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  border: solid 1px #eee;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.voucher-qty-cart input {
+  color: #000;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px !important;
+  padding: 0 2px;
+  width: 80px;
+  min-width: 30px;
+  height: 25px;
+  text-align: center;
+  background: #fff;
+  border: solid 1px #eee;
+  border-radius: 4px;
 }
 /*# sourceMappingURL=style.css.map */

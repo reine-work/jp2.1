@@ -3603,15 +3603,12 @@ button[aria-expanded='false']>.faq-icon {
 }
 
 .voucher-filter {
-    p {
-        @include for-phone {
-            text-align: center;
-        }
+    @include for-tablet {
+        margin-bottom: 1rem;
     }
     .voucher-search {
-        padding-right: 10px;
         @include for-phone {
-            margin: 0.5rem 0;
+            margin: 0 0 1rem 0;
         }
     }
     select {
@@ -3619,48 +3616,6 @@ button[aria-expanded='false']>.faq-icon {
         font-size: 0.95rem;
         padding: 8px 30px 8px 15px;
     }
-}
-
-.voucher-qty .count {
-    color: #000;
-    display: inline-block;
-    vertical-align: top;
-    font-size: 15px;
-    padding: 0 2px;
-    width: 80px;
-    min-width: 30px;
-    height: 25px;
-    text-align: center;
-    background: #fff;
-    border: solid 1px #eee;
-    border-radius: 4px;
-}
-
-.voucher-qty .plus {
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: top;
-    border: solid 1px #eee;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-.voucher-qty .minus {
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: top;
-    border: solid 1px #eee;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 4px;
-    background-clip: padding-box;
 }
 
 .minus:hover {
@@ -3818,5 +3773,131 @@ span {
         label {
             font-size: 0.9rem;
         }
+    }
+}
+
+.bag-icon {
+    vertical-align: middle;
+    padding: 5px 0;
+    height: 38px;
+    text-align: right;
+    img {
+        width: 25px;
+        display: inline;
+        margin-right: 5px;
+        @include for-tablet {
+            margin: 0;
+            width: 20px;
+        }
+        @include for-phone {
+            margin: 0;
+            width: 20px;
+        }
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        display: inline;
+        position: relative;
+        top: 3px;
+        font-weight: normal;
+        font-size: 0.9rem !important;
+        color: $black;
+        @include for-phone {
+            margin: 0 !important;
+        }
+    }
+}
+
+.voucher-cart-header {
+    p {
+        @include for-phone {
+            text-align: center;
+        }
+    }
+}
+
+.voucher-cart-item {
+    h6 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1rem !important;
+    }
+    span {
+        font-size: 0.9rem !important;
+        display: block;
+    }
+    button {
+        font-size: 0.85rem !important;
+        padding: 0;
+    }
+    .voucher-cart-item-delete {
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        button {
+            height: 25px;
+            width: 25px;
+            border-radius: 100%;
+        }
+    }
+}
+
+.voucher-cart-total {
+    text-align: right;
+    @include for-phone {
+        text-align: center;
+    }
+}
+
+#modal-voucher-cart-delete {
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+.close {
+    font-weight: 300;
+    font-size: 28px;
+    position: relative;
+    top: -3px;
+    right: -3px;
+}
+
+.voucher-qty-cart {
+    .input-group {
+        width: 100px;
+    }
+    .bootstrap-touchspin .input-group-btn-vertical {
+        top: -4px;
+    }
+    button,
+    .btn {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        border: solid 1px #eee;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 4px;
+        padding: 0;
+    }
+    input {
+        color: #000;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 15px !important;
+        padding: 0 2px;
+        width: 80px;
+        min-width: 30px;
+        height: 25px;
+        text-align: center;
+        background: #fff;
+        border: solid 1px #eee;
+        border-radius: 4px;
     }
 }

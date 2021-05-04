@@ -56,12 +56,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="voucher-filter d-sm-flex">
-                            <div class="mr-auto">
-                                <h2 class="about-big-text mb-0">Browse Vouchers</h2>
-                                <p>Gold's Gym</p>
+                        <div class="voucher-filter row">
+                            <div class="col-lg-4 col-md-12">
+                                <h5 class="mb-0"><strong>Gold's Gym</strong></h5>
+                                <p>Browse 12 vouchers</p>
                             </div>
-                            <div class="bd-highlight">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="input-group voucher-search">
                                     <input type="text" class="form-control" placeholder="Search vouchers">
                                     <div class="input-group-append">
@@ -69,14 +69,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bd-highlight">
-                                <div>
-                                    <select class="custom-select">
-                                        <option selected>Sort by</option>
-                                        <option value="1">Price</option>
-                                        <option value="2">Name</option>
-                                        <option value="3">Date posted</option>
-                                    </select>
+                            <div class="col-lg-2 col-md-3 col-sm-3 col">
+                                <select class="custom-select">
+                                    <option selected>Sort by</option>
+                                    <option value="1">Price</option>
+                                    <option value="2">Name</option>
+                                    <option value="3">Date posted</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-3 col">
+                                <div class="bag-icon">
+                                    <a href="voucher-cart.html">
+                                        <img src="images/others/shopping-bag-icon.svg" />
+                                        <p>My Bag <span><strong>(3)</strong></span></p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -84,9 +90,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="voucher-listing">
                             <div class="voucher-item">
-                                <a href="#"><img src="images/others/sample-voucher-image.jpg" /></a>
+                                <a href="voucher-details.html"><img src="images/others/sample-voucher-image.jpg" /></a>
                                 <div class="voucher-card-cap">
-                                    <a href="#">3-month Gym Subscription</a>
+                                    <a href="voucher-details.html">3-month Gym Subscription</a>
                                     <p>Enjoy everything that Gold's Gym has to offer: Use of gym equipment, group exercise or dance classes</p>
                                     <h4 class="text-danger">Php 5,000</h4>
                                     <div class="d-flex justify-content-start bd-highlight">
@@ -94,7 +100,7 @@
                                             <button type="button" class="btn btn-outline-dark">View</button>
                                         </div>
                                         <div class="bd-highlight">
-                                            <button type="button" class="btn btn-secondary">Add to Bag <i class="las la-shopping-bag"></i></button>
+                                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-voucher-add-cart">Add to Bag <i class="las la-shopping-bag"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -104,9 +110,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="voucher-listing">
                             <div class="voucher-item">
-                                <a href="#"><img src="images/others/sample-voucher-image.jpg" /></a>
+                                <a href="voucher-details.html"><img src="images/others/sample-voucher-image.jpg" /></a>
                                 <div class="voucher-card-cap">
-                                    <a href="#">3-month Gym Subscription</a>
+                                    <a href="voucher-details.html">3-month Gym Subscription</a>
                                     <p>Enjoy everything that Gold's Gym has to offer: Use of gym equipment, group exercise or dance classes</p>
                                     <h4 class="text-danger">Php 5,000</h4>
                                     <div class="d-flex justify-content-start bd-highlight">
@@ -114,7 +120,7 @@
                                             <button type="button" class="btn btn-outline-dark">View</button>
                                         </div>
                                         <div class="bd-highlight">
-                                            <button type="button" class="btn btn-secondary">Add to Bag <i class="las la-shopping-bag"></i></button>
+                                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-voucher-add-cart">Add to Bag <i class="las la-shopping-bag"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -124,9 +130,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="voucher-listing">
                             <div class="voucher-item">
-                                <a href="#"><img src="images/others/sample-voucher-image.jpg" /></a>
+                                <a href="voucher-details.html"><img src="images/others/sample-voucher-image.jpg" /></a>
                                 <div class="voucher-card-cap">
-                                    <a href="#">3-month Gym Subscription</a>
+                                    <a href="voucher-details.html">3-month Gym Subscription</a>
                                     <p>Enjoy everything that Gold's Gym has to offer: Use of gym equipment, group exercise or dance classes</p>
                                     <h4 class="text-danger">Php 5,000</h4>
                                     <div class="d-flex justify-content-start bd-highlight">
@@ -134,7 +140,7 @@
                                             <button type="button" class="btn btn-outline-dark">View</button>
                                         </div>
                                         <div class="bd-highlight">
-                                            <button type="button" class="btn btn-secondary">Add to Bag <i class="las la-shopping-bag"></i></button>
+                                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-voucher-add-cart">Add to Bag <i class="las la-shopping-bag"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -144,9 +150,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="voucher-listing">
                             <div class="voucher-item">
-                                <a href="#"><img src="images/others/sample-voucher-image.jpg" /></a>
+                                <a href="voucher-details.html"><img src="images/others/sample-voucher-image.jpg" /></a>
                                 <div class="voucher-card-cap">
-                                    <a href="#">3-month Gym Subscription</a>
+                                    <a href="voucher-details.html">3-month Gym Subscription</a>
                                     <p>Enjoy everything that Gold's Gym has to offer: Use of gym equipment, group exercise or dance classes</p>
                                     <h4 class="text-danger">Php 5,000</h4>
                                     <div class="d-flex justify-content-start bd-highlight">
@@ -154,7 +160,7 @@
                                             <button type="button" class="btn btn-outline-dark">View</button>
                                         </div>
                                         <div class="bd-highlight">
-                                            <button type="button" class="btn btn-secondary">Add to Bag <i class="las la-shopping-bag"></i></button>
+                                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-voucher-add-cart">Add to Bag <i class="las la-shopping-bag"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -164,9 +170,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="voucher-listing">
                             <div class="voucher-item">
-                                <a href="#"><img src="images/others/sample-voucher-image.jpg" /></a>
+                                <a href="voucher-details.html"><img src="images/others/sample-voucher-image.jpg" /></a>
                                 <div class="voucher-card-cap">
-                                    <a href="#">3-month Gym Subscription</a>
+                                    <a href="voucher-details.html">3-month Gym Subscription</a>
                                     <p>Enjoy everything that Gold's Gym has to offer: Use of gym equipment, group exercise or dance classes</p>
                                     <h4 class="text-danger">Php 5,000</h4>
                                     <div class="d-flex justify-content-start bd-highlight">
@@ -174,7 +180,7 @@
                                             <button type="button" class="btn btn-outline-dark">View</button>
                                         </div>
                                         <div class="bd-highlight">
-                                            <button type="button" class="btn btn-secondary">Add to Bag <i class="las la-shopping-bag"></i></button>
+                                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-voucher-add-cart">Add to Bag <i class="las la-shopping-bag"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -184,9 +190,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="voucher-listing">
                             <div class="voucher-item">
-                                <a href="#"><img src="images/others/sample-voucher-image.jpg" /></a>
+                                <a href="voucher-details.html"><img src="images/others/sample-voucher-image.jpg" /></a>
                                 <div class="voucher-card-cap">
-                                    <a href="#">3-month Gym Subscription</a>
+                                    <a href="voucher-details.html">3-month Gym Subscription</a>
                                     <p>Enjoy everything that Gold's Gym has to offer: Use of gym equipment, group exercise or dance classes</p>
                                     <h4 class="text-danger">Php 5,000</h4>
                                     <div class="d-flex justify-content-start bd-highlight">
@@ -194,7 +200,7 @@
                                             <button type="button" class="btn btn-outline-dark">View</button>
                                         </div>
                                         <div class="bd-highlight">
-                                            <button type="button" class="btn btn-secondary">Add to Bag <i class="las la-shopping-bag"></i></button>
+                                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-voucher-add-cart">Add to Bag <i class="las la-shopping-bag"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -223,6 +229,27 @@
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="modal-voucher-add-cart" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    <img src="images/others/check-icon.png" class="mb-3" />
+                    <h5 class="mb-1"><strong>Voucher has been added to your bag.</strong></h5>
+                    <div class="d-flex mt-3">
+                        <div class="flex-fill">
+                            <button type="button" class="btn btn-light btn-block mr-2">Add more items</button>
+                        </div>
+                        <div class="flex-fill">
+                            <button type="button" class="btn btn-secondary btn-block ml-2">Checkout <i class="las la-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-bar">

@@ -1,15 +1,7 @@
 $(document).ready(function() {
-    $(document).on('click', '.plus', function() {
-        $('.count').val(parseInt($('.count').val()) + 1);
-    });
-    $(document).on('click', '.minus', function() {
-        $('.count').val(parseInt($('.count').val()) - 1);
-        if ($('.count').val() == 0) {
-            $('.count').val(1);
-        }
-    });
+    $("#modal-voucher-otp").modal('show');
 });
 
-$(document).ready(function() {
-    $("#modal-voucher-otp").modal('show');
+$("input[name='item-qty']").TouchSpin({
+    max: 99999
 });

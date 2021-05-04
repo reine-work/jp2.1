@@ -55,69 +55,51 @@
         <div id="subpage-container">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-10 col-md-8 col-sm-10">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="voucher-details">
-                                    <img src="images/others/sample-voucher-image.jpg" />
-                                </div>
+                    <div class="col-lg-6">
+                        <div class="voucher-cart">
+                            <div class="voucher-cart-header">
+                                <h2 class="about-big-text mb-0">Your bag</h2>
+                                <p>Your items from Gold's Gym</p>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="voucher-details">
-
-                                    <h2><strong>3-Month Unlimited Gym Membership in Quezon City, Makati & More</strong></h2>
-                                    <p class="mb-2">Start your fitness journey and enjoy a 3-month unlimited gym membership at your chosen Gold's Gym branch for Php 5,000 instead of Php 13,800</p>
-                                    <span class="badge badge-pill badge-light">235 available vouchers</span>
-
-                                    <hr>
-
-                                    <h2 class="text-danger my-3"><strong>Php 5,000</strong></h2>
-
-                                    <div class="voucher-qty-cart mb-lg-5">
+                            <div class="card voucher-cart-item my-3">
+                                <div class="card-body">
+                                    <h6 class="mb-0">
+                                        <strong>3-month Gym Subscription</strong>
+                                        <p class="mb-0 float-sm-right"><strong>Php 10,000</strong></p>
+                                    </h6>
+                                    <span class="text-black-50">Php 5,000 x 2</span>
+                                    <div class="voucher-qty-cart mt-2">
                                         <input id="item-qty" type="text" value="1" name="item-qty" data-bts-button-down-class="btn btn-light" data-bts-button-up-class="btn btn-light">
                                     </div>
-
-                                    <div class="mobile-desk-button">
-                                        <button type="button" class="btn btn-secondary">Add to Bag <i class="las la-shopping-bag"></i></button>
+                                    <div class="voucher-cart-item-delete">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-voucher-cart-delete"><i class="las la-times"></i></button>
                                     </div>
-
                                 </div>
                             </div>
-
-                            <div class="col-lg-12">
-                                <div class="voucher-content">
-                                    <div class="card mt-4">
-                                        <div class="card-header">
-                                            <p class="mb-0"><strong>Description</strong></p>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul>
-                                                <li>Start your fitness journey and enjoy a 3-month unlimited membership at your chosen Gold's Gym branch for P3425 instead of P13800</li>
-                                                <li>Gold's Gym is the largest international fitness chain in the Philippines</li>
-                                                <li>Enjoy complimentary use of lockers and showers</li>
-                                                <li>Choose your preferred branch from 14 locations nationwide</li>
-                                                <li>Have full access to the gym's state-of-the-art equipment such as weights, cardio machines, selectorized, plate-loaded, functional equipment, and more</li>
-                                                <li>Gold's Gym is also a favorite spot of many celebrities, athletes, and models for working out and recreation</li>
-                                                <li>The gym's knowledgeable and friendly staff are always ready to assist you</li>
-                                            </ul>
-                                        </div>
+                            <div class="card voucher-cart-item my-3">
+                                <div class="card-body">
+                                    <h6 class="mb-0">
+                                        <strong>3-month Gym Subscription</strong>
+                                        <p class="mb-0 float-sm-right"><strong>Php 10,000</strong></p>
+                                    </h6>
+                                    <span class="text-black-50">Php 5,000 x 2</span>
+                                    <div class="voucher-qty-cart mt-2">
+                                        <input id="item-qty" type="text" value="1" name="item-qty" data-bts-button-down-class="btn btn-light" data-bts-button-up-class="btn btn-light">
                                     </div>
-                                    <div class="card mt-4">
-                                        <div class="card-header">
-                                            <p class="mb-0"><strong>Terms and Conditions</strong></p>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul>
-                                                <li>Redemption Period: January 4, 2021 to April 30, 2021</li>
-                                                <li>Operating Hours: 7:00 AM to 9:00 PM</li>
-                                                <li>Gold's Gym is currently implementing safety protocols, kindly check them here</li>
-                                                <li>One voucher is valid for a 3-month unlimited membership at your chosen branch</li>
-                                                <li>After purchasing the voucher, download the free GoldsGymPH App by Globe Rush to enjoy your membership</li>
-                                                <li>Memberships need to be started at the latest by April 30, 2021</li>
-                                                <li>Multiple voucher purchases need to be consumed consecutively/continuously</li>
-                                                <li>You may still buy multiple vouchers for yourself or as gifts for friends and relatives</li>
-                                            </ul>
-                                        </div>
+                                    <div class="voucher-cart-item-delete">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-voucher-cart-delete"><i class="las la-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="voucher-cart-total">
+                                <p class="mb-0">Total Cart Amount</p>
+                                <h4 class="text-danger"><strong>Php 20,000</strong></h4>
+                                <div class="d-flex mt-3">
+                                    <div class="flex-fill">
+                                        <button type="button" class="btn btn-light btn-block mr-2">Add items</button>
+                                    </div>
+                                    <div class="flex-fill">
+                                        <button type="button" class="btn btn-secondary btn-block ml-2">Checkout <i class="las la-arrow-right"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -126,11 +108,22 @@
                 </div>
             </div>
         </div>
-        <div class="mobile-cart-button">
-            <button type="button" class="btn btn-secondary btn-block"><strong>Add to Bag • Php 5,000</strong></button>
-            <button type="button" class="btn btn-light btn-block">Back</button>
-        </div>
     </section>
+
+    <div class="modal fade" id="modal-voucher-cart-delete" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    <h5 class="mb-1"><strong>Delete item</strong></h5>
+                    <p>Are you sure you want to delete this item?</p>
+                    <button type="button" class="btn btn-danger">Yes, Delete</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-bar">
