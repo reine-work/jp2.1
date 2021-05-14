@@ -3555,6 +3555,7 @@ button[aria-expanded='false']>.faq-icon {
 
 // voucher listing
 .voucher-item {
+    position: relative;
     margin: 1rem 0;
     transition: all 0.2s ease-in-out;
     &:hover {
@@ -3562,11 +3563,29 @@ button[aria-expanded='false']>.faq-icon {
         -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
         box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
     }
+    span.exc-voucher-tag {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+        color: #473600;
+        font-weight: bold;
+        margin-bottom: 0.2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom-right-radius: 3px;
+        background: #ffd65e;
+        background: -moz-linear-gradient(45deg, #ffd65e 0%, #febf04 100%);
+        background: -webkit-linear-gradient(45deg, #ffd65e 0%, #febf04 100%);
+        background: linear-gradient(45deg, #ffd65e 0%, #febf04 100%);
+    }
     .voucher-card-cap {
         padding: 1.5rem;
         background: #fff;
         border: solid 1px #f0f0f0;
         a {
+            font-size: 0.9rem;
+        }
+        a.voucher-title {
             font-size: 1.25rem;
             text-decoration: none;
             color: $black;
@@ -3627,7 +3646,27 @@ button[aria-expanded='false']>.faq-icon {
 }
 
 .voucher-details {
+    position: relative;
+    span.exc-voucher-tag {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+        color: #473600;
+        font-weight: bold;
+        margin-bottom: 0.2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom-right-radius: 3px;
+        background: #ffd65e;
+        background: -moz-linear-gradient(45deg, #ffd65e 0%, #febf04 100%);
+        background: -webkit-linear-gradient(45deg, #ffd65e 0%, #febf04 100%);
+        background: linear-gradient(45deg, #ffd65e 0%, #febf04 100%);
+    }
     img {
+        width: 100%;
+        &:hover {
+            cursor: zoom-in;
+        }
         @include for-tablet {
             margin-bottom: 1rem;
         }
@@ -3654,6 +3693,9 @@ button[aria-expanded='false']>.faq-icon {
 }
 
 .voucher-content {
+    p {
+        margin: 0.75rem 0 !important;
+    }
     p,
     li {
         font-size: 0.9rem !important;
@@ -3689,13 +3731,12 @@ span {
     }
 }
 
-.mobile-desk-button {
-    display: none;
-    @include for-desktop-up {
-        display: block;
-    }
-}
-
+// .mobile-desk-button {
+//     display: none;
+//     @include for-desktop-up {
+//         display: block;
+//     }
+// }
 .voucher-data-search {
     min-height: 500px;
 }
@@ -3899,5 +3940,163 @@ span {
         background: #fff;
         border: solid 1px #eee;
         border-radius: 4px;
+    }
+}
+
+// payment link
+.view-voucher {
+    background: #241e5c;
+    background: linear-gradient(90deg, rgba(36, 30, 92, 1) 0%, rgba(81, 50, 149, 1) 100%);
+    background-size: 100% 50vh;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    padding: 2rem 0;
+    p,
+    li,
+    tr {
+        font-size: 0.9rem !important;
+    }
+    .view-voucher-content {
+        border-radius: 0.25rem;
+        background: $white;
+        border-bottom: solid 1px #eee;
+        border-left: solid 1px #eee;
+        border-right: solid 1px #eee;
+        border-top: solid 6px #7dc242;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+        position: relative;
+        .view-voucher-merchlogo {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 50px;
+            @include for-phone {
+                position: relative;
+                top: 0;
+                right: 0;
+                left: 0;
+                margin: 0 auto 0.5rem auto;
+            }
+        }
+        .view-voucher-header {
+            padding: 2rem;
+            border-bottom: solid 1px #eee;
+            @include for-phone {
+                padding: 2rem 2rem 1rem 2rem;
+            }
+            .view-voucher-sender {
+                max-width: 85%;
+                @include for-phone {
+                    max-width: 100%;
+                }
+            }
+            @include for-phone {
+                text-align: center;
+            }
+        }
+        .view-voucher-body {
+            padding: 2rem;
+        }
+        .view-voucher-card {
+            background: #f1f5f8;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            margin-top: 2rem;
+            p {
+                margin: 0;
+                padding: 0;
+                opacity: 0.8;
+                @include for-phone {
+                    font-size: 1rem;
+                }
+            }
+            h3 {
+                margin: 1rem 0;
+                font-weight: 700;
+                padding: 6px 15px;
+                @include for-phone {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        button {
+            height: 45px;
+        }
+        .view-voucher-send-details {
+            margin: 1rem 0 0 0;
+            p {
+                font-size: 1rem;
+                margin: 0;
+                padding: 0;
+                line-height: 1.5;
+            }
+            span {
+                font-size: 0.85rem;
+                opacity: 0.5;
+                margin: 0.75rem 0;
+            }
+            table {
+                td,
+                th {
+                    padding: 0 15px 0 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .view-voucher-footer {
+        margin-top: 1rem;
+        @include for-phone {
+            text-align: center;
+            width: 90%;
+            margin: 1rem auto 0 auto;
+        }
+        p {
+            font-size: 0.9rem;
+            opacity: 0.5;
+            margin: 0;
+            padding: 0;
+            @include for-tablet {
+                margin-top: 1rem;
+            }
+            @include for-phone {
+                margin-top: 1rem;
+            }
+        }
+        img {
+            margin-bottom: 1rem;
+            @include for-tablet {
+                width: 175px;
+                margin-top: 0.5rem;
+            }
+            @include for-phone {
+                width: 175px;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+.voucher-price-compare {
+    margin-bottom: 1.25rem;
+    .voucher-old-price {
+        text-decoration: line-through;
+    }
+}
+
+.floating-cart {
+    position: fixed;
+    right: -50px;
+    top: 200px;
+    z-index: 3000;
+    transition: all 0.1s ease-in-out;
+    img {
+        height: 40px;
+    }
+    &:hover {
+        right: 0;
     }
 }
